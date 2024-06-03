@@ -1,3 +1,36 @@
 :root{
-    --color-base: #ffffff; /*mudar ainda*/
+    --base-white: #ffffff; /*mudar ainda*/
+    --white90: #f8f8fa;
+    --white80: #f6f7f8;
+    --white20: #616b77; /* Subtítulo */
+    --white5: #1f2328; /* texto principal */
+
+    --base-negro: #010409;
+    --gris90: #212121;
+    --gris80: #2f2f2f;
+    --gris10: #a0a9b2; /* Subtítulo */
+    --gris5: #ececea; /* texto principal */
 }
+
+/* BODY */
+body{
+    background-color: var(--base-negro);
+}
+
+/* HEADER */
+header{
+    padding-left: 10px;
+    padding-top: 10px;
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--gris90);
+}
+header .logo{
+    height: 70px;
+    width: 70px;
+}
+header h1{
+    color: var(--gris5);
+}
+
+/* MAIN */

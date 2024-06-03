@@ -1,8 +1,9 @@
+<?php
+// Conexão com o banco de bados no mysql-workbench
+    $host = 'localhost';
+    $user = 'root';
+    $pass = '123456';
+    $db = 'cat_treinee';
 
-<!-- banco = mysql.connector.connect(
-    host = 'localhost',
-    port = '3306',
-    user = 'root',
-    password = '123456',
-    database = 'cat_treinee'
-) -->
+    $conn = new mysqli($host, $user, $pass, $db);
+?>
