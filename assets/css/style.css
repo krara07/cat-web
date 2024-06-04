@@ -1,36 +1,61 @@
 :root{
-    --base-white: #ffffff; /*mudar ainda*/
-    --white90: #f8f8fa;
-    --white80: #f6f7f8;
-    --white20: #616b77; /* Subtítulo */
-    --white5: #1f2328; /* texto principal */
-
-    --base-negro: #010409;
-    --gris90: #212121;
-    --gris80: #2f2f2f;
+    --base-negro: #010409; /* Cor Base */
+    --gris90: #212121; /* Header */
+    --gris80: #2f2f2f; /* Botões */
     --gris10: #a0a9b2; /* Subtítulo */
     --gris5: #ececea; /* texto principal */
+
+    --cores: #0094ff; /* Azul e Laranja */
+}
+
+/* TRANSIÇÕES */
+body, header, header h1, header.scrolled{
+    transition: background-color 1.0s, color 1.0s;
 }
 
 /* BODY */
 body{
     background-color: var(--base-negro);
+    color: var(--gris5);
+    font-family: arial;
 }
 
 /* HEADER */
 header{
-    padding-left: 10px;
-    padding-top: 10px;
+    width: 100%;
+    padding-left: 15px;
+    padding-top: 12px;
+    padding-bottom: 9px;
     position: fixed;
     z-index: 1000;
     background-color: var(--gris90);
+    display: flex;
+    align-items: center;
 }
 header .logo{
     height: 70px;
     width: 70px;
 }
+
+header .scrolled{
+    background-color: rgba(var(--gris90), 0.7);
+}
+
+header div.none{
+    visibility: hidden;
+}
+
+header div.add{ /* PARA TESTES */
+    visibility: visible;
+}
+
 header h1{
-    color: var(--gris5);
+    font-family: arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--cores);
+    padding-left: 20px;
 }
 
 /* MAIN */
