@@ -1,15 +1,22 @@
 :root{
     --base-negro: #010409; /* Cor Base */
     --gris90: #212121; /* Header */
-    --gris80: #2f2f2f; /* Botões */
+    --gris80: #242424; /* Botões */
+    --gris70: #2b2b2b;
+    --gris60: #383838;
     --gris10: #a0a9b2; /* Subtítulo */
     --gris5: #ececea; /* texto principal */
+    --caixas:
 
     --cores: #0094ff; /* Azul e Laranja */
 }
 
 /* TRANSIÇÕES */
-body, header, header h1, header.scrolled{
+body,
+header,
+header h1,
+header.scrolled,
+main.login section{
     transition: background-color 1.0s, color 1.0s;
 }
 
@@ -23,7 +30,6 @@ body{
 /* HEADER */
 header{
     width: 100%;
-    padding-left: 15px;
     padding-top: 12px;
     padding-bottom: 9px;
     position: fixed;
@@ -31,31 +37,94 @@ header{
     background-color: var(--gris90);
     display: flex;
     align-items: center;
-}
-header .logo{
-    height: 70px;
-    width: 70px;
-}
+    justify-content: space-between;
 
-header .scrolled{
-    background-color: rgba(var(--gris90), 0.7);
+    .logo, .login{
+        height: 70px;
+        width: 70px;
+    }
+    .right, .center, .left{
+        flex: 1;
+        text-align: center;
+    }
+    .right{
+        text-align: right;
+        padding-right: 15px;
+    }
+    .left{
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
+    .center{
+        text-align: center;
+    }
+    .scrolled{
+        background-color: rgba(var(--gris90), 0.7);
+    }
+    div.none{
+        visibility: hidden;
+    }
+    div.add{ /* PARA TESTES */
+        visibility: visible;
+    }
+    div h1{
+        color: var(--cores);
+        font-family: arial, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 25px;
+        padding-left: 20px;
+    }
 }
-
-header div.none{
-    visibility: hidden;
-}
-
-header div.add{ /* PARA TESTES */
-    visibility: visible;
-}
-
-header h1{
-    font-family: arial, sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 25px;
-    color: var(--cores);
-    padding-left: 20px;
-}
-
 /* MAIN */
+
+
+/* MAIN LOGIN */
+
+main.login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    section{
+        background-color: var(--gris80);
+    }
+    section.perfil{
+        text-align: center;
+        align-items: center;
+        margin-top: 6%;
+        margin-left: 25px;
+        img{
+            margin-top: 20px;
+            height: 30%;
+            width: 30%;
+        }
+        div.blocos{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        img{
+            margin-top: 40px;
+        }
+        div.blocos div.text1 form.form{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            ul{
+                margin-left: 20px;
+                input{
+                    border: none;
+                    background-color: var(--gris60);
+                }
+            }
+        }
+    }
+}
+
+/* main.logado{
+} */
