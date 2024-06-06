@@ -6,9 +6,9 @@
     --gris60: #383838;
     --gris10: #a0a9b2; /* Subtítulo */
     --gris5: #ececea; /* texto principal */
-    --caixas:
 
     --cores: #0094ff; /* Azul e Laranja */
+    --cores-es: #005694;
 }
 
 /* TRANSIÇÕES */
@@ -16,8 +16,10 @@ body,
 header,
 header h1,
 header.scrolled,
-main.login section{
-    transition: background-color 1.0s, color 1.0s;
+main.login section,
+input,
+label{
+    transition: background-color 1.0s, color 0.5s;
 }
 
 /* BODY */
@@ -85,46 +87,104 @@ header{
 
 main.login{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
-
     section{
         background-color: var(--gris80);
+    };
+    section{
+        margin-top: 5.5%;
+        border-radius: 8px;
     }
     section.perfil{
+        position: fixed;
         text-align: center;
         align-items: center;
-        margin-top: 6%;
-        margin-left: 25px;
-        img{
+        margin-left: 15px;
+
+        div.mod_img div.center{
+            align-items: center;
+        }
+        div.mod_img div.image_preview img{
             margin-top: 20px;
             height: 30%;
             width: 30%;
+        }
+        div.mod_img button, div.blocos div.text1 button{
+            margin-top: 20px;
+            border-style: solid;
+            border-color: var(--cores);
+            border-width: 2px;
+            padding: 5px 10px;
+            background-color: var(--gris60);
+            color: var(--gris10)
         }
         div.blocos{
             display: flex;
             justify-content: space-between;
             margin-top: 50px;
-            margin-left: 10px;
-            margin-right: 10px;
+            padding-bottom: 30px;
+            border-bottom-color: var(--cores-es);
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            div.text1 button{
+                padding: 5px 30px;
+                margin-top: 30%;
+            }
+            div.text2{
+                margin-right: 20px;
+            }
+        }
+        div.mod_img div.image-preview img{
+            border-color: var(--cores);
+            border-style: solid;
+            border-width: 5px;
+            height: 250px;
+            width: 250px;
         }
         img{
             margin-top: 40px;
+            border-radius: 100%;
         }
-        div.blocos div.text1 form.form{
+        div.blocos div.text1 form, div.blocos div.text2 form{
             align-items: center;
             display: flex;
             justify-content: space-between;
+            margin-top: 30px;
             ul{
                 margin-left: 20px;
+                label, input{
+                    margin-bottom: 50px;
+                    flex-direction: column;
+                    display: block;
+                    text-align: right;
+                    font-size: 15px;
+                }
                 input{
                     border: none;
+                    border-bottom-style: solid;
+                    border-bottom-color: var(--cores-es);
+                    border-bottom-width: 1px;
                     background-color: var(--gris60);
+                    color: var(--gris10);
+                    text-align: center;
                 }
             }
         }
     }
+    section.personal{
+        padding: 10%;
+        align-items: right;
+        margin-left: 39.7%;
+        /* overflow: auto; */
+        /* box-sizing: border-box; */
+        flex: 1;
+        margin-right: 15px;
+    };
 }
 
-/* main.logado{
-} */
+/* FOOTER */
+
+footer.login{
+    margin-top: 3%;   
+}

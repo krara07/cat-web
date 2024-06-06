@@ -21,11 +21,12 @@ function modos(){
         document.documentElement.style.setProperty('--base-negro', '#ffffff');
         document.documentElement.style.setProperty('--gris90', '#f8f8fa');
         document.documentElement.style.setProperty('--gris80', '#f6f7f8'); // modo claro
-        // document.documentElement.style.setProperty('--gris70', '#616b77');
-        // document.documentElement.style.setProperty('--gris60', '#616b77');
+        document.documentElement.style.setProperty('--gris70', '#f1f3f1');
+        document.documentElement.style.setProperty('--gris60', '#eae7ea');
         document.documentElement.style.setProperty('--gris10', '#616b77');
         document.documentElement.style.setProperty('--gris5', '#1f2328');
         document.documentElement.style.setProperty('--cores', '#ff6b00');
+        document.documentElement.style.setProperty('--cores-es', '#ffa05c');
         login.src = 'assets/images/login-cl.png';
     }
     else{
@@ -37,6 +38,7 @@ function modos(){
         document.documentElement.style.setProperty('--gris10', '#a0a9b2');
         document.documentElement.style.setProperty('--gris5', '#ececea');
         document.documentElement.style.setProperty('--cores', '#0094ff');
+        document.documentElement.style.setProperty('--cores-es', '#005694');
         login.src = 'assets/images/login-es.png';
     }
 }
@@ -71,5 +73,31 @@ window.addEventListener('scroll', function(){
     }else{
         header.classList.remove('scrolled');
         div.classList.add('none');
+    }
+});
+
+function upload_img() {
+    var fileInput = document.getElementById('imageUpload');
+    var previewImg = document.getElementById('previewImg');
+    
+    if (fileInput.files && fileInput.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+            var imageUrl = e.target.result;
+            previewImg.src = imageUrl;
+            localStorage.setItem('uploadedImage', imageUrl);
+        }
+        
+        reader.readAsDataURL(fileInput.files[0]);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var previewImg = document.getElementById('previewImg');
+    var storedImage = localStorage.getItem('uploadedImage');
+
+    if (storedImage) {
+        previewImg.src = storedImage;
     }
 });

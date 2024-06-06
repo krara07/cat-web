@@ -21,31 +21,52 @@
         </header>
         <main class="login">
             <section class="perfil"> <!-- SECTION <-> -->
-                    <img id="login" class="login" src="./assets/images/login-es.png">
+                <div class="mod_img">   
+                    <div class="image-preview" id="imagePreview">
+                        <img id="previewImg" class="login" src="./assets/images/login-es.png">
+                    </div>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <button onclick="upload_img()">Mudar Imagem</button>
+                    </div>
                     <div class="blocos">
                         <div class="text1">
                             <form class="form">
                                 <ul>
-                                    <label for="singleline">Código:</label>
+                                    <label for="singleline">Nome Completo:</label>
+                                    <label for="singleline">Código de Login:</label>
                                 </ul>
                                 <ul>
+                                    <input type="text" id="name" name="nome">
                                     <input type="text" id="cod" name="codigo_login">
                                 </ul>
                             </form>
+                            <button class="cod">Enviar Código</button>
                         </div>
                         <div class="text2">
-                            <h1>TEXTO 2</h1>
-                            <h1>TEXTO EXEMPLO</h1>
+                            <form class="form">
+                                <ul>
+                                    <label for="singleline">Email:</label>
+                                    <label for="singleline">Senha:</label>
+                                    <label for="singleline">Confirmar Senha:</label>
+                                </ul>
+                                <ul>
+                                    <input type="text" id="email" name="email">
+                                    <input type="password" id="senha" name="senha">
+                                    <input type="password" id="confirm_senha" name="confirm_senha">
+                                </ul>
+                            </form>
                         </div>
                     </div>
+                    <footer class="login">
+                        <p>asdasda</p>
+                    </footer>
             </section>
             <section class="personal">
                 <div>
-
+                    <h1>TEXTO EXEMPLO</h1>
                 </div>
             </section>
         </main>
-        <footer></footer>
         <script src="./assets/js/script.js"></script> <!-- Caminho do script do site -->
     </body>
 
