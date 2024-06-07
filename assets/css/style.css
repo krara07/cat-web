@@ -102,6 +102,9 @@ main.login{
         align-items: center;
         margin-left: 15px;
 
+        nav.login{
+            margin-top: 15px;
+        }
         div.mod_img div.center{
             align-items: center;
         }
@@ -153,6 +156,9 @@ main.login{
             margin-top: 30px;
             ul{
                 margin-left: 20px;
+                input.labels1, input.labels2{
+                    width: 212px;
+                }
                 label, input{
                     margin-bottom: 50px;
                     flex-direction: column;
@@ -164,27 +170,44 @@ main.login{
                     border: none;
                     border-bottom-style: solid;
                     border-bottom-color: var(--cores-es);
-                    border-bottom-width: 1px;
+                    border-bottom-width: 2px;
                     background-color: var(--gris60);
                     color: var(--gris10);
                     text-align: center;
                 }
+                div.vision{
+                    display: flex;
+                    justify-content: space-between;
+                    justify-content: flex-start;
+                    button{
+                        width: 10px;
+                        height: 10px;
+                        border: none;
+                        border-bottom-color: var(--cores-es);
+                        border-bottom-style: solid;
+                        border-bottom-width: 1px;
+                    }
+                    #image{
+                        background-color: var(--gris60);
+                        background-image: url('../images/eye-azul.png');
+                        background-repeat: no-repeat;
+                        background-size: 20px 20px;
+                        background-position: center;
+                        padding: 10px 10px;
+                    }
+                }
             }
         }
     }
-    section.personal{
-        padding: 10%;
-        align-items: right;
-        margin-left: 39.7%;
-        /* overflow: auto; */
-        /* box-sizing: border-box; */
-        flex: 1;
-        margin-right: 15px;
-    };
 }
+section.personal{
+    padding: 10%;
+    align-items: right;
+    margin-left: 39.7%;
+    overflow: auto;
+    box-sizing: border-box;
+    flex: 1;
+    margin-right: 15px;
+};
 
 /* FOOTER */
-
-footer.login{
-    margin-top: 3%;   
-}

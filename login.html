@@ -37,10 +37,10 @@
                                 </ul>
                                 <ul>
                                     <input type="text" id="name" name="nome">
-                                    <input type="text" id="cod" name="codigo_login">
+                                    <input type="text" id="cod" name="codigo_login"> <!--Mudar para readonly quando feito o login-->
                                 </ul>
                             </form>
-                            <button class="cod">Enviar Código</button>
+                            <button onclick="enviarEmail('beatrizADJ@gmail.com', 'Assunto do E-mail', 'Corpo do E-mail')">Enviar E-mail</button>
                         </div>
                         <div class="text2">
                             <form class="form">
@@ -50,16 +50,20 @@
                                     <label for="singleline">Confirmar Senha:</label>
                                 </ul>
                                 <ul>
-                                    <input type="text" id="email" name="email">
-                                    <input type="password" id="senha" name="senha">
-                                    <input type="password" id="confirm_senha" name="confirm_senha">
+                                    <input type="text" id="email" name="email" class="labels1">
+                                    <input type="password" id="senha" name="senha" class="labels2"> <!--Mudar para readonly quando feito o login-->
+                                    <div class="vision">
+                                        <button id="image"></button>
+                                        <input type="password" id="confirm_senha" name="confirm_senha"> <!--Mudar para readonly quando feito o login-->
+                                    </div>
+                                    
                                 </ul>
                             </form>
                         </div>
                     </div>
-                    <footer class="login">
-                        <p>asdasda</p>
-                    </footer>
+                    <nav class="login">
+                        <p>texto</p>
+                    </nav>
             </section>
             <section class="personal">
                 <div>
@@ -67,8 +71,7 @@
                 </div>
             </section>
         </main>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="./assets/js/script.js"></script> <!-- Caminho do script do site -->
     </body>
-
-
 </html>

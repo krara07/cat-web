@@ -101,3 +101,51 @@ document.addEventListener('DOMContentLoaded', function() {
         previewImg.src = storedImage;
     }
 });
+
+
+
+// código de usuário
+
+const generateCode = length => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
+};
+
+function gerar_cod(){ // Função para gerar o código
+    const randomCode = generateCode(10);
+}
+
+
+// let assunto = 'teste assunto';
+// let destinatario = 'brendaevil55@gmail.com';
+// let corpo = 'teste corpo do email';
+// let mensagem = 'Mensagem do email, teste';
+
+// enviar email
+// function enviarEmail(destinatario, assunto, corpo){
+//     Email.send({
+//         Host: "smtp.gmail.com",
+//         Username: "beatrizADJofc@gmail.com",
+//         Password: "997557087",
+//         To: destinatario,
+//         From: "beatrizADJofc@gmail.com",
+//         Subject: assunto,
+//         Body: corpo,
+//     }).then(function (mensagem) {
+//         alert("E-mail enviado com sucesso!");
+//     });
+// }
+
+function enviarEmail(destinatario, assunto, corpo) {
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "brendaevil55@gmail.com",
+        Password: "249D792C1803119F75E2B93C7BD26D823A0C",
+        To: destinatario,
+        From: "brendaevil55@gmail.com",
+        Subject: assunto,
+        Body: corpo,
+    }).then(function (mensagem) {
+        alert("E-mail enviado com sucesso!");
+    });
+}
