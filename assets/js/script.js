@@ -1,8 +1,9 @@
-// MODO CLARO/ESCURO
+// variáveis
 let ativar_modos = true;
 let cor_logo = false;
+let login_senha = false;
 
-login = false;
+// let login_senha = false;
 
 function login(){
     var login_nome = document.getElementById('login');
@@ -13,10 +14,12 @@ function login(){
     }
 }
 
+// Modo claro/ escuro
 function modos(){
     ativar_modos = !ativar_modos;
     cor_logo = !cor_logo;
     const login = document.getElementById('login');
+    const senha = document.getElementById("senha");
     if (!ativar_modos){
         document.documentElement.style.setProperty('--base-negro', '#ffffff');
         document.documentElement.style.setProperty('--gris90', '#f8f8fa');
@@ -28,6 +31,7 @@ function modos(){
         document.documentElement.style.setProperty('--cores', '#ff6b00');
         document.documentElement.style.setProperty('--cores-es', '#ffa05c');
         login.src = 'assets/images/login-cl.png';
+        senha.src = 'assets/images/eye_laranja.png';
     }
     else{
         document.documentElement.style.setProperty('--base-negro', '#010409');
@@ -40,10 +44,11 @@ function modos(){
         document.documentElement.style.setProperty('--cores', '#0094ff');
         document.documentElement.style.setProperty('--cores-es', '#005694');
         login.src = 'assets/images/login-es.png';
+        senha.src = 'assets/images/eye_azul.png';
     }
 }
 
-
+// trocar imagens
 document.addEventListener('DOMContentLoaded', (event) => {
     const imagem = document.getElementById('logo');
     logo.addEventListener('mouseenter', () => {
@@ -64,6 +69,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
+// header fixa, transparente
 window.addEventListener('scroll', function(){
     var header = document.getElementById('header');
     var div = document.getElementById('div');
@@ -76,7 +82,26 @@ window.addEventListener('scroll', function(){
     }
 });
 
-function upload_img() {
+
+// password -> text - Não funciona
+function ver_senha(){
+    // login_senha = !login_senha;
+    var senha1 = document.getElementById("senha");
+    var senha2 = document.getElementById("confirm_senha");
+    if(senha1.type == "password"){
+        // trocar type = text
+        senha1 = input.type = "text";
+        senha2 = input.type = "text";
+    }
+    else{
+        // trocar type = password
+        senha1 = input.type = "password";
+        senha2 = input.type = "password";
+    }
+}
+
+// atualizar imagem de perfil => login.html
+function upload_img(){
     var fileInput = document.getElementById('imageUpload');
     var previewImg = document.getElementById('previewImg');
     
@@ -93,7 +118,7 @@ function upload_img() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(){
     var previewImg = document.getElementById('previewImg');
     var storedImage = localStorage.getItem('uploadedImage');
 
@@ -103,9 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-// código de usuário
-
+// código de usuário - não funciona ---------------------------------------------------|
 const generateCode = length => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
@@ -136,7 +159,7 @@ function gerar_cod(){ // Função para gerar o código
 //     });
 // }
 
-function enviarEmail(destinatario, assunto, corpo) {
+function enviarEmail(destinatario, assunto, corpo){
     Email.send({
         Host: "smtp.elasticemail.com",
         Username: "brendaevil55@gmail.com",
@@ -149,3 +172,4 @@ function enviarEmail(destinatario, assunto, corpo) {
         alert("E-mail enviado com sucesso!");
     });
 }
+// código de usuário - não funciona ---------------------------------------------------|

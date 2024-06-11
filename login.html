@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./assets/css/reset.css"> <!-- Link do caminho para a página de reset do estilo do site -->
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link do caminho para a página do estilo do site -->
+        <link rel="icon" type="image/x-icon" href=""> <!-- Colocar ícone no título do site -->
         <title>Cat Treinee - LOGIN</title> <!-- Título -->
     </head>
     <body>
@@ -53,8 +54,8 @@
                                     <input type="text" id="email" name="email" class="labels1" title="email_exemplo@gmail.com">
                                     <input type="password" id="senha" name="senha" class="labels2"> <!--Mudar para readonly quando feito o login-->
                                     <div class="vision"> <!-- Não esquecer de usar tittle="" -->
-                                        <button id="image"></button>
-                                        <input type="password" id="confirm_senha" name="confirm_senha"> <!--Mudar para readonly quando feito o login-->
+                                        <input type="password" id="confirm_senha"> <!--Mudar para readonly quando feito o login-->
+                                        <button type="button" id="image" onclick="ver_senha()"></button>
                                     </div>
                                 </ul>
                             </form>
