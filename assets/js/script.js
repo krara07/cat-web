@@ -19,7 +19,8 @@ function modos(){
     ativar_modos = !ativar_modos;
     cor_logo = !cor_logo;
     const login = document.getElementById('login');
-    const senha = document.getElementById("senha");
+    const maleta = document.getElementById('maleta');
+    // const senha = document.getElementById('senha');
     if (!ativar_modos){
         document.documentElement.style.setProperty('--base-negro', '#ffffff');
         document.documentElement.style.setProperty('--gris90', '#f8f8fa');
@@ -31,7 +32,8 @@ function modos(){
         document.documentElement.style.setProperty('--cores', '#ff6b00');
         document.documentElement.style.setProperty('--cores-es', '#ffa05c');
         login.src = 'assets/images/login-cl.png';
-        senha.src = 'assets/images/eye_laranja.png';
+        maleta.src = 'assets/images/maleta-cl.png';
+        document.documentElement.style.setProperty('--img-eye', 'url(../images/eye-laranja.png)');
     }
     else{
         document.documentElement.style.setProperty('--base-negro', '#010409');
@@ -44,7 +46,8 @@ function modos(){
         document.documentElement.style.setProperty('--cores', '#0094ff');
         document.documentElement.style.setProperty('--cores-es', '#005694');
         login.src = 'assets/images/login-es.png';
-        senha.src = 'assets/images/eye_azul.png';
+        maleta.src = 'assets/images/maleta-es.png';
+        document.documentElement.style.setProperty('--img-eye', "url('../images/eye-azul.png')");
     }
 }
 
@@ -85,18 +88,14 @@ window.addEventListener('scroll', function(){
 
 // password -> text - Não funciona
 function ver_senha(){
-    // login_senha = !login_senha;
-    var senha1 = document.getElementById("senha");
-    var senha2 = document.getElementById("confirm_senha");
-    if(senha1.type == "password"){
-        // trocar type = text
-        senha1 = input.type = "text";
-        senha2 = input.type = "text";
-    }
-    else{
-        // trocar type = password
-        senha1 = input.type = "password";
-        senha2 = input.type = "password";
+    var senha1 = document.getElementById("pass");
+    var senha2 = document.getElementById("pass2");
+    if (senha1.type === "password") {
+        senha1.type = "text";
+        senha2.type = "text";
+    } else {
+        senha1.type = "password";
+        senha2.type = "password";
     }
 }
 
@@ -127,49 +126,59 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 });
 
+function novo_user(){
+    var nome = document.getElementById("nome"); //input
+    var erro_nome = document.getElementById("erro_nome"); //span
 
-// código de usuário - não funciona ---------------------------------------------------|
-const generateCode = length => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
-};
+    var cod = document.getElementById("cod"); //input
+    var erro_cod = document.getElementById("erro_cod"); //span
 
-function gerar_cod(){ // Função para gerar o código
-    const randomCode = generateCode(10);
+    var email = document.getElementById("email"); //input
+    var erro_email = document.getElementById("erro_email"); //span
+
+    var pass = document.getElementById("pass"); //input
+    var erro_pass = document.getElementById("erro_pass"); //span
+
+    var pass2 = document.getElementById("pass2"); //input
+    var erro_pass2 = document.getElementById("erro_pass2"); //span
+
+    if(!nome.value){
+        erro_nome.textContent = "*";
+        erro_nome.style.display = "inline";
+    }
+    
+    if(!cod.value){
+        erro_cod.textContent = "*";
+        erro_cod.style.display = "inline";
+    }
+    
+    if(!pass.value || !pass2.value){
+        erro_pass.textContent = "*";
+        erro_pass.style.display = "inline";
+        erro_pass2.textContent = "*";
+        erro_pass2.style.display = "inline";
+    }
+
+    if(!email.value){
+        erro_email.textContent = "*";
+        erro_email.style.display = "inline";
+    }
 }
 
+function user_apro(){
+    var cod = document.getElementById("cod"); //input
+    var erro_cod = document.getElementById("erro_cod"); //span
 
-// let assunto = 'teste assunto';
-// let destinatario = 'brendaevil55@gmail.com';
-// let corpo = 'teste corpo do email';
-// let mensagem = 'Mensagem do email, teste';
+    var pass = document.getElementById("pass"); //input
+    var erro_pass = document.getElementById("erro_pass"); //span
 
-// enviar email
-// function enviarEmail(destinatario, assunto, corpo){
-//     Email.send({
-//         Host: "smtp.gmail.com",
-//         Username: "beatrizADJofc@gmail.com",
-//         Password: "997557087",
-//         To: destinatario,
-//         From: "beatrizADJofc@gmail.com",
-//         Subject: assunto,
-//         Body: corpo,
-//     }).then(function (mensagem) {
-//         alert("E-mail enviado com sucesso!");
-//     });
-// }
+    if(!cod.value){
+        erro_cod.textContent = "*";
+        erro_cod.style.display = "inline";
+    }
 
-function enviarEmail(destinatario, assunto, corpo){
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "brendaevil55@gmail.com",
-        Password: "249D792C1803119F75E2B93C7BD26D823A0C",
-        To: destinatario,
-        From: "brendaevil55@gmail.com",
-        Subject: assunto,
-        Body: corpo,
-    }).then(function (mensagem) {
-        alert("E-mail enviado com sucesso!");
-    });
+    if(!pass.value){
+        erro_pass.textContent = "*";
+        erro_pass.style.display = "inline";
+    }
 }
-// código de usuário - não funciona ---------------------------------------------------|

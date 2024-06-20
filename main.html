@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/reset.css"> <!-- Link do caminho para a página de reset do estilo do site -->
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link do caminho para a página do estilo do site -->
+        <link rel="stylesheet" href="./assets/css/style.scss"> <!-- Link do caminho para a página do estilo do site -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Cat Treinee</title> <!-- Título -->
     </head>
     <body>
@@ -15,8 +18,13 @@
                 <img id="logo" src="./assets/images/logo-es.png" class="logo" onclick="modos()">
                 <h1 class="h1">Cat Treinee</h1>
             </div>
-            <div id="div" class="none"> <!-- CENTER -->
-                <h1>Teste de visibilidade - Funcional</h1> <!-- Ainda decidir o que colocar -->
+            <div id="div" class="add"> <!-- CENTER -->
+                <nav class="gov-br">
+                    <a href="https://www.gov.br/pt-br/orgaos-do-governo" target="_blank">Órgãos do Governo</a>
+                    <a href="https://www.gov.br/acessoainformacao/pt-br" target="_blank">Acesso à Informação</a>
+                    <a href="http://www4.planalto.gov.br/legislacao" target="_blank">Legislação</a>
+                    <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-digital" target="_blank">Acessibilidade</a>
+                </nav>
             </div>
             <div class="right">
                 <a href="./login.html" class="bt_login">
@@ -24,12 +32,20 @@
                 </a>
             </div>
         </header>
-        <main>
-
+        <main class="index">
+            <section class="inicio">
+                <img src="./assets/images/maleta-es.png" alt="" id="maleta">
+                <h1>Comunicação de Acidente de Trabalho - CAT Treinee</h1>
+                <h2>Projeto Integrador do Grupo 2 da Turma 060 do curso Técnico de Informática,
+                    abrangendo as disciplinas UC11 (Execução de testes e implantação de aplicativos computacionais),
+                    UC12 (Execução de codificação, manutenção e documentação de aplicativos para desktop) e
+                    UC13 (Execução de codificação, manutenção e documentação de aplicativos para internet).
+                    O objetivo é desenvolver um site e um aplicativo web para o registro de Comunicação de Acidente
+                    de Trabalho (CAT), inspirado no modelo disponível na página do
+                    <a href="https://www.gov.br/pt-br/servicos/registrar-comunicacao-de-acidente-de-trabalho-cat">GOV.BR</a></h2>
+            </section>
         </main>
         <footer></footer>
         <script src="./assets/js/script.js"></script> <!-- Caminho do script do site -->
     </body>
-
-
 </html>
