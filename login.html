@@ -6,14 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/reset.css"> <!-- Link do caminho para a página de reset do estilo do site -->
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/style.scss"> <!-- Link do caminho para a página do estilo do site -->
+        <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link do caminho para a página do estilo do site -->
         <link rel="icon" type="image/x-icon" href=""> <!-- Colocar ícone no título do site -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Cat Treinee - LOGIN</title> <!-- Título -->
     </head>
     <body>
         <header id="header">
             <div class="left">
-                <img id="logo" src="./assets/images/logo-es.png" class="logo" onclick="modos()">
+                <img alt="Logo" id="logo" src="./assets/images/logo-es.png" class="logo" onclick="modos()" title="Logo Cat Treinee">
                 <a href="./main.html"><h1>Cat Treinee - Login</h1></a>
             </div>
             <div id="div" class="none"> <!-- CENTER -->
@@ -24,7 +27,7 @@
             <section class="perfil"> <!-- SECTION <-> -->
                 <div class="mod_img">   
                     <div class="image-preview" id="imagePreview">
-                        <img id="previewImg" class="login" src="./assets/images/login-es.png">
+                        <img alt="Login" id="previewImg" class="login" src="./assets/images/login-es.png" title="Botão Login">
                     </div>
                     <input type="file" id="imageUpload" accept="image/*">
                     <button onclick="upload_img()">Mudar Imagem</button>

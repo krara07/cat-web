@@ -76,11 +76,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 window.addEventListener('scroll', function(){
     var header = document.getElementById('header');
     var div = document.getElementById('div');
-    if (window.scrollY > 10){
+    if (window.scrollY > 15){
         header.classList.add('scrolled');
+        div.classList.remove('none');
         div.classList.add('add');
-    }else{
+    } else {
         header.classList.remove('scrolled');
+        div.classList.remove('add');
         div.classList.add('none');
     }
 });
@@ -182,3 +184,6 @@ function user_apro(){
         erro_pass.style.display = "inline";
     }
 }
+
+
+

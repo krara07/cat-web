@@ -7,16 +7,12 @@
     --gris10: #a0a0a0; /* Subtítulo */
     --gris5: #ececea; /* texto principal */
 
+    --white: #ffffff;
+
     --cores: #0094ff; /* Azul e Laranja */
     --cores-es: #005694;
 
     --img-eye: url('../images/eye-azul.png');
-}
-
-@mixin box-bottom{
-    border-bottom-color: var(--cores-es);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
 }
 
 /* TRANSIÇÕES */
@@ -106,10 +102,155 @@ header{
         }
     }
 }
-/* MAIN */
+
+/* MAINS */
+/* MAIN INICIO */
+main.index{                                /* MAIN.INDEX */
+    align-items: center;
+    text-align: center;
+}
+
+main.index section.inicio{                 /* SECTION.INICIO */
+    padding-top: 8%;
+    margin: 0px 5%;
+    /* @include box-bottom; */
+    img{
+        width: 3%;
+    }
+    h1{
+        font-size: 35px;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+    }
+    h2{
+        text-align: justify;
+        margin-top: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 3vh;
+        a{
+            color: var(--cores);
+        }
+    }
+    h2::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+main.index section.iniciar{                /* SECTION.INICIAR */
+    padding-top: 2%;
+    margin: 0px 5%;
+    padding-bottom: 2%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-bottom: 100%; */
+    div.iniciar{
+        margin: 0px 10%;
+        h2{
+            font-size: 30px;
+            font-family: "Raleway", sans-serif;
+            /* font-weight: bold; */
+        }
+        div{
+            display: flex;
+            p{
+                margin-top: 3%;
+            }
+            p.txt_avaliado{
+                margin-left: 10px;
+            }
+        }
+        a button{
+            color: var(--gris5);
+            font-size: 2vh;
+            padding: 1vh 5vh;
+            border-width: 3px;
+            border-color: var(--gris60);
+            background-color: var(--gris90);
+            cursor: pointer;
+        }
+        a button:hover{
+            background-color: var(--gris60);
+        }
+    }
+}
+
+main.index section.inicio,
+main.index section.iniciar,                 /* BORDER-BOTTOM */
+main.index section.modify,
+main.login div.blocos,
+main.login button,
+main.login #image,
+section.resumo{
+    border-bottom-style: solid;
+    border-bottom-color: var(--cores-es);
+    border-bottom-width: 1px;
+}
+
+main.index section.modify,
+section.resumo{
+    margin: 1% 5%;
+    color: var(--gris5);
+    display: flex;
+    h2.data{
+        margin-left: 10px;
+    }
+}
+
+section.modify{
+    padding-bottom: 1%;
+    display: flex;  
+    justify-content: space-between;
+    div{
+        display: flex;
+        align-items: center;
+    }
+    div.div2{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        img{
+            width: 2.5%;
+            margin-left: 2vh;                   /* Resolver depois */
+        }
+    }
+}
+
+section.resumo{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    div{
+        display: flex;
+        align-items: center;
+    }
+    img{
+        width: 40px;
+        height: 35px;
+    }
+    h2{
+        font-size: 3vh;
+    }
+    p{
+        margin-top: 5px;
+        color: var(--gris10);
+        margin-left: 40px;
+        font-size: 20px;
+    }
+}
 
 
 /* MAIN LOGIN */
+main.login{
+    div.campos_obri{
+        display: flex;
+        justify-content: right;
+    }
+}
 
 main.login{
     display: flex;
@@ -117,8 +258,6 @@ main.login{
     justify-content: space-between;
     section{
         background-color: var(--gris80);
-    }
-    section{
         margin-top: 5.5%;
         border-radius: 8px;
     }
@@ -139,22 +278,24 @@ main.login{
             width: 30%;
         }
         div.mod_img button, div.blocos div.text1 button{
+            cursor: pointer;
             margin-top: 20px;
             border-style: solid;
             border-color: var(--cores);
-            border-width: 2px;
+            border-width: 1px;
             padding: 5px 10px;
-            background-color: var(--gris60);
+            background-color: var(--gris90);
             color: var(--gris10)
+        }
+        div.mod_img button:hover, div.blocos div.text1 button:hover{
+            background-color: var(--gris60);
+            color: var(--white);
         }
         div.blocos{
             display: flex;
             justify-content: space-between;
             margin-top: 50px;
             padding-bottom: 30px;
-            border-bottom-color: var(--cores-es);
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
             div.text1 button{
                 padding: 5px 30px;
                 margin-top: 30%;
@@ -176,6 +317,11 @@ main.login{
         div.blocos div.text1{
             button{
                 cursor: pointer;
+                background-color: var(--gris80);
+            }
+            button:hover{
+                background-color: var(--gris60);
+                color: var(--white);
             }
         }
         div.blocos div.text1 form, div.blocos div.text2 form{
@@ -218,9 +364,6 @@ main.login{
                         width: 10px;
                         height: 10px;
                         border: none;
-                        border-bottom-color: var(--cores-es);
-                        border-bottom-style: solid;
-                        border-bottom-width: 1px;
                     }
                     #image{
                         background-color: var(--gris60);
@@ -236,47 +379,6 @@ main.login{
     }
 }
 
-main.login{
-    div.campos_obri{
-        display: flex;
-        justify-content: right;
-    }
-}
-
-main.index{
-    align-items: center;
-    text-align: center;
-    section.inicio{
-        padding-top: 8%;
-        margin: 0px 5%;
-        @include box-bottom; /* Resolver */
-        img{
-            width: 3%;
-        }
-        h1{
-            font-size: 35px;
-            font-family: "Raleway", sans-serif;
-            font-weight: bold;
-        }
-        h2{
-            text-align: justify;
-            margin-top: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            line-height: 3vh;
-            a{
-                color: var(--cores);
-            }
-        }
-        h2::after{
-            content: "";
-            display: inline-block;
-            width: 100%;
-        }
-    }
-
-}
-
 section.personal{
     padding: 10%;
     align-items: right;
@@ -287,4 +389,5 @@ section.personal{
     margin-right: 15px;
 }
 
-/* FOOTER */
+
+/* MAIN CAT */

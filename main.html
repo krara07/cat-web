@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/reset.css"> <!-- Link do caminho para a página de reset do estilo do site -->
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/style.scss"> <!-- Link do caminho para a página do estilo do site -->
+        <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link do caminho para a página do estilo do site -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
     <body>
         <header id="header" class="main">
             <div class="left">
-                <img id="logo" src="./assets/images/logo-es.png" class="logo" onclick="modos()">
+                <img alt="Logo" id="logo" src="./assets/images/logo-es.png" class="logo" onclick="modos()">
                 <h1 class="h1">Cat Treinee</h1>
             </div>
-            <div id="div" class="add"> <!-- CENTER -->
+            <div id="div" class="none"> <!-- CENTER -->
                 <nav class="gov-br">
                     <a href="https://www.gov.br/pt-br/orgaos-do-governo" target="_blank">Órgãos do Governo</a>
                     <a href="https://www.gov.br/acessoainformacao/pt-br" target="_blank">Acesso à Informação</a>
@@ -28,21 +28,56 @@
             </div>
             <div class="right">
                 <a href="./login.html" class="bt_login">
-                    <img id="login" src="./assets/images/login-es.png" class="login" onclick="login()">
+                    <img alt="Login" id="login" src="./assets/images/login-es.png" class="login" onclick="login()">
                 </a>
             </div>
         </header>
         <main class="index">
             <section class="inicio">
-                <img src="./assets/images/maleta-es.png" alt="" id="maleta">
+                <img src="./assets/images/maleta-es.png" alt="Maleta" id="maleta">
                 <h1>Comunicação de Acidente de Trabalho - CAT Treinee</h1>
                 <h2>Projeto Integrador do Grupo 2 da Turma 060 do curso Técnico de Informática,
-                    abrangendo as disciplinas UC11 (Execução de testes e implantação de aplicativos computacionais),
-                    UC12 (Execução de codificação, manutenção e documentação de aplicativos para desktop) e
-                    UC13 (Execução de codificação, manutenção e documentação de aplicativos para internet).
+                    abrangendo a disciplina UC13 (Execução de codificação, manutenção e documentação de aplicativos para internet).
                     O objetivo é desenvolver um site e um aplicativo web para o registro de Comunicação de Acidente
                     de Trabalho (CAT), inspirado no modelo disponível na página do
                     <a href="https://www.gov.br/pt-br/servicos/registrar-comunicacao-de-acidente-de-trabalho-cat">GOV.BR</a></h2>
+            </section>
+            <section class="iniciar">
+                <div class="iniciar">
+                    <h2>Registrar Comunicação de Acidente de Trabalho - CAT</h1>
+                    <div>
+                        <p>Avaliação:</p>
+                        <p class="txt_avaliado" id="txt_ava">Sem Avaliação</p> <!-- 1. Sem Avaliação, 2. Em Processo, 3. CAT Aceito-->
+                    </div>
+                </div>
+                <div class="iniciar">
+                    <a href="./cat.html"><button>INICIAR</button></a>
+                </div>
+            </section>
+            <section class="modify">
+                <div class="div1">
+                    <h2>Última Modificação:</h2>
+                    <h2 class="data">21/06/2024</h2>
+                </div>
+                <div class="div2">
+                    <h2>Compartilhar</h2>
+                    <!-- <img src="./assets/images/link-es.png" alt="LINK"> -->
+                </div>
+            </section>
+            <section class="resumo">
+                <div>
+                    <img src="./assets/images/select-es.png" alt="Select">
+                    <h2>O que é?</h2>
+                </div>
+                <p>Serviço para comunicar um acidente de trabalho ou de trajeto, bem como uma doença ocupacional. O documento pode ser usado em outros órgãos além do INSS</p>
+                <div>
+                    <img src="./assets/images/select-es.png" alt="Select">
+                    <h2>Quem pode utilizar este serviço?</h2>
+                </div>
+                <div>
+                    <img src="./assets/images/select-es.png" alt="Select">
+                    <h2>Etapas para a realização deste serviço</h2>
+                </div>
             </section>
         </main>
         <footer></footer>
