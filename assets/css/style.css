@@ -179,13 +179,7 @@ main.index section.iniciar{                /* SECTION.INICIAR */
     }
 }
 
-main.index section.inicio,
-main.index section.iniciar,                 /* BORDER-BOTTOM */
-main.index section.modify,
-main.login div.blocos,
-main.login button,
-main.login #image,
-section.resumo{
+.border-bottom{
     border-bottom-style: solid;
     border-bottom-color: var(--cores-es);
     border-bottom-width: 1px;
