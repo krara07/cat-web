@@ -20,9 +20,11 @@ function modos(){
     cor_logo = !cor_logo;
     const login = document.getElementById('login');
     const maleta = document.getElementById('maleta');
+    const select = document.getElementsByClassName('id_select'); // Não funciona (ainda)
     // const senha = document.getElementById('senha');
     if (!ativar_modos){
         document.documentElement.style.setProperty('--base-negro', '#ffffff');
+        document.documentElement.style.setProperty('--gris100', '#f2f2f2');
         document.documentElement.style.setProperty('--gris90', '#f8f8fa');
         document.documentElement.style.setProperty('--gris80', '#f6f7f8'); // modo claro
         document.documentElement.style.setProperty('--gris70', '#f1f3f1');
@@ -33,10 +35,12 @@ function modos(){
         document.documentElement.style.setProperty('--cores-es', '#ffa05c');
         login.src = 'assets/images/login-cl.png';
         maleta.src = 'assets/images/maleta-cl.png';
+        select.src = 'assets/images/select-cl.png';
         document.documentElement.style.setProperty('--img-eye', 'url(../images/eye-laranja.png)');
     }
     else{
         document.documentElement.style.setProperty('--base-negro', '#010409');
+        document.documentElement.style.setProperty('--gris100', '#0d0d0d');
         document.documentElement.style.setProperty('--gris90', '#212121');
         document.documentElement.style.setProperty('--gris80', '#242424'); // modo escuro
         document.documentElement.style.setProperty('--gris70', '#2b2b2b');
@@ -47,6 +51,7 @@ function modos(){
         document.documentElement.style.setProperty('--cores-es', '#005694');
         login.src = 'assets/images/login-es.png';
         maleta.src = 'assets/images/maleta-es.png';
+        select.src = 'assets/images/select-es.png';
         document.documentElement.style.setProperty('--img-eye', "url('../images/eye-azul.png')");
     }
 }
