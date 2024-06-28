@@ -4,98 +4,52 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/reset.css"> <!-- Link do caminho para a página de reset do estilo do site -->
+        <link rel="stylesheet" href="./assets/css/reset.css"> Link do caminho para a página de reset do estilo do site
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link do caminho para a página do estilo do site -->
         <link rel="icon" type="image/x-icon" href=""> <!-- Colocar ícone no título do site -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>Cat Treinee - LOGIN</title> <!-- Título -->
+        <title>ProSafe - LOGIN</title> <!-- Título -->
     </head>
-    <body>
+    <body class="login">
         <header id="header">
             <div class="left">
-                <img alt="Logo" id="logo" src="./assets/images/logo-es.png" class="logo" onclick="modos()" title="Logo Cat Treinee">
-                <a href="./main.html"><h1>Cat Treinee - Login</h1></a>
-            </div>
-            <div id="div" class="none"> <!-- CENTER -->
-                <h1>Teste de visibilidade - Funcional</h1> <!-- Ainda decidir o que colocar -->
+                <img alt="Logo" src="./assets/images/logo-es.png" class="img-logo" onclick="modos()">
+                <a href="./main.html"><h1 class="h1">ProSafe - LOGIN</h1></a>
             </div>
         </header>
-        <main class="login">
-            <section class="perfil"> <!-- SECTION <-> -->
-                <div class="mod_img">   
-                    <div class="image-preview" id="imagePreview">
-                        <img alt="Login" id="previewImg" class="login" src="./assets/images/login-es.png" title="Botão Login">
+
+        <main class="login">    
+            <section class="login border-full">
+                <img src="./assets/images/logo-es.png" alt="Logo" id="logo" class="logo">
+                <form action="./login.html" class="form-login">
+                    <div class="form">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" required>
                     </div>
-                    <input type="file" id="imageUpload" accept="image/*">
-                    <button onclick="upload_img()">Mudar Imagem</button>
+                    <div class="form">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
                     </div>
-                    <div class="blocos border-bottom">
-                        <div class="text1">
-                            <form class="form">
-                                <ul>
-                                    <div class="campos_obri">
-                                        <span id="erro_nome" class="erros"></span>
-                                        <label for="singleline">Nome Completo:</label>
-                                    </div>
-                                    <div class="campos_obri">
-                                        <span id="erro_cod" class="erros"></span>
-                                        <label for="singleline">Código de Login:</label>
-                                    </div>
-                                </ul>
-                                <ul>
-                                    <input type="text" id="nome" name="nome" required>
-                                    <input type="text" id="cod" name="codigo_login" required> <!--Mudar para readonly quando feito o login-->
-                                </ul>
-                            </form>
-                            <button onclick="novo_user()" class="border-bottom">Novo Usuário</button>
-                            <button onclick="user_apro()" class="border-bottom">Já tenho Cadastro</button>
-                        </div>
-                        <div class="text2">
-                            <form class="form">
-                                <ul>
-                                    <div class="campos_obri">
-                                        <span id="erro_email" class="erros"></span>
-                                        <label for="singleline">Email:</label>
-                                    </div>
-                                    <div class="campos_obri">
-                                        <span id="erro_pass" class="erros"></span>
-                                        <label for="singleline">Senha:</label>
-                                    </div>
-                                    <div class="campos_obri">
-                                        <span id="erro_pass2" class="erros"></span>
-                                        <label for="singleline">Confirmar:</label>
-                                    </div>
-                                </ul>
-                                <ul> 
-                                    <input type="text" id="email" name="email" class="labels1" title="email_exemplo@gmail.com" required>
-                                    <input type="password" id="pass" name="senha" class="labels2" required> <!--Mudar para readonly quando feito o login-->
-                                    <div class="vision"> <!-- Não esquecer de usar tittle="" -->
-                                        <input type="password" id="pass2" required> <!--Mudar para readonly quando feito o login-->
-                                        <button type="button" id="image" onclick="ver_senha()" class="border-bottom"></button>
-                                    </div>
-                                </ul>
-                            </form>
-                        </div>
-                    </div>
-                    <nav class="login">
-                        <p>texto</p>
-                    </nav>
-            </section>
-            <section class="personal">
-                <div>
-                    <h1>TEXTO EXEMPLO</h1>
-                    <!-- utilizar o <pre></pre> -->
+                </form>
+                <form action="./login.html" class="checkbox">
+                    <input type="checkbox" id="ver_senha" class="check">
+                    <label for="">Ver Senha</label>
+                </form>
+                <div class="button-login">
+                    <button type="submit" class="button-click">Entrar</button>
                 </div>
             </section>
+            <section class="logado"></section>
         </main>
+
         <footer>
             <div class="div1">
                 <h2>Dev. Full-Stack</h2>
                 <li>Bianca Araujo Coelho <a href="https://github.com/BrytanniADJ">Github</a> <a href="">LinkedIn</a></li>
-                <li>Lucas Bernardo #</li>
+                <li>Lucas Bernardo Ribeiro Siqueira <a href="https://github.com/RickSanchez1029">Github</a> <a href="https://linkedin.com/in/lucas-ribeiro-23a39a302">LinkedIn</a></li>
                 <li>Maria Eduarda Fernandes Costa</li>
             </div>
             <div class="div3">
@@ -112,7 +66,7 @@
                 <h2>Senac em Minas</h2>
                 <div class="senac">
                     <img src="./assets/images/local-es.png" alt="Ícone de Localização">
-                    <p>Rua dos Tupinambás, 1.086 - Belo Horizonte / MG</p>
+                    <p>Rua José Duarte de Paiva, 775 - Santa Luzia, Sete Lagoas - MG</p>
                 </div>
                 <div class="senac">
                     <a href="https://www.facebook.com/senacminas/"><img src="./assets/images/facebook-es.png" alt="Facebook"></a>

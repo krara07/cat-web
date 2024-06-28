@@ -16,14 +16,6 @@
     --img-eye: url('../images/eye-azul.png');
 }
 
-/* Unidades de medida (ordem):
-1 px;
-1 vh;
-1 pc;
-1 pt;
-1 in;
-*/
-
 /* TRANSIÇÕES */
 body,
 header,
@@ -33,25 +25,6 @@ main.login section,
 input,
 label{
     transition: background-color 1.0s, color 0.5s;
-}
-
-/* RE-Class */
-.border-bottom{
-    border-bottom-style: solid;
-    border-bottom-color: var(--cores-es);
-    border-bottom-width: 1px;
-}
-
-.border-full{
-    border: 1px solid var(--cores-es);
-}
-
-.button-click{
-    border-width: 3px;
-    border-color: var(--gris60);
-    background-color: var(--gris90);
-    cursor: pointer;
-    color: var(--gris5);
 }
 
 /* BODY */
@@ -73,10 +46,9 @@ header{
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--gris60);
-    box-shadow: 0px 0px 40px 5px var(--gris60);
 
-    img.img-logo, img.login{
-        width: 50px;
+    img.logo, img.login{
+        width: 70px;
         cursor: pointer;
     }
     img.login{
@@ -139,8 +111,6 @@ footer{
     justify-content: space-between;
     border-top: 1px solid var(--gris60);
     background-color: var(--gris100);
-    box-shadow: 0px 0px 30px var(--gris70) inset;
-
     div{
         margin: 1vh 5vh;
     }
@@ -248,13 +218,24 @@ main.index section.iniciar{                /* SECTION.INICIAR */
             }
         }
         a button{
+            color: var(--gris5);
             font-size: 2vh;
             padding: 1vh 5vh;
+            border-width: 3px;
+            border-color: var(--gris60);
+            background-color: var(--gris90);
+            cursor: pointer;
         }
         a button:hover{
             background-color: var(--gris60);
         }
     }
+}
+
+.border-bottom{
+    border-bottom-style: solid;
+    border-bottom-color: var(--cores-es);
+    border-bottom-width: 1px;
 }
 
 main.index section.modify,
@@ -326,80 +307,150 @@ section.resumo{
 }
 
 /* PÁGINA LOGIN -------------------------------------------------------------------------------- */
-
-html, body.login{
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+main.login{
+    div.campos_obri{
+        display: flex;
+        justify-content: right;
+    }
 }
 
 main.login{
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-    margin-inline: 7in;
-    margin-bottom: 2%;
-}
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    section{
+        background-color: var(--gris80);
+        margin-top: 5.5%;
+        border-radius: 8px;
+    }
+    section.perfil{
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        margin-left: 15px;
 
-main.login section.login{
-    height: 100%;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 0px 20px var(--cores-es) inset;
-    border-radius: 2%;
-    img{
-        margin-top: 3vh;
-        width: 10%;
-    }
-    form.form-login{
-        margin-top: 10vh;
-        margin-inline: 10vh;
-        div.form{
-            display: flex;
-            flex-direction: column;
-            /* padding-bottom: 5vh; */
-            label{
-                font-size: 2.2vh;
-                padding-bottom: 10px;
-                margin-top: 20px;
-            }
-            input{
-                padding: 5px 0px;
-                border-radius: 50px;
-                border-color: var(--cores-es);
-                box-shadow: 0px 0px 10px var(--gris80) inset;
-                background-color: var(--gris100);
-                color: var(--gris5);
-                text-align: center;
-                font-size: 18px;
-            }
+        nav.login{
+            margin-top: 15px;
         }
-    }
-    form.checkbox{
-        margin-left: 10vh;
-        text-align: left;
-        margin-top: 2vh;
-    }
-    div.button-login{
-        margin-top: 8pc;
-        text-align: right;
-        margin-right: 5vh;
-        button{
-            font-size: 15px;
+        div.mod_img div.center{
+            align-items: center;
+        }
+        div.mod_img div.image_preview img{
+            margin-top: 20px;
+            width: 30%;
+        }
+        div.mod_img button, div.blocos div.text1 button{
+            cursor: pointer;
+            margin-top: 20px;
+            border-style: solid;
+            border-color: var(--cores);
+            border-width: 1px;
             padding: 5px 10px;
-            border-radius: 10px;
-            background-color: var(--gris80);
+            background-color: var(--gris90);
+            color: var(--gris10)
         }
-        button:hover{
+        div.mod_img button:hover, div.blocos div.text1 button:hover{
             background-color: var(--gris60);
+            color: var(--white);
+        }
+        div.blocos{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-bottom: 30px;
+            div.text1 button{
+                padding: 5px 30px;
+                margin-top: 30%;
+            }
+            div.text2{
+                margin-right: 20px;
+            }
+        }
+        div.mod_img div.image-preview img{
+            border-color: var(--cores);
+            border-style: solid;
+            border-width: 5px;
+            width: 150px;
+        }
+        img{
+            margin-top: 40px;
+            border-radius: 100%;
+        }
+        div.blocos div.text1{
+            button{
+                cursor: pointer;
+                background-color: var(--gris80);
+            }
+            button:hover{
+                background-color: var(--gris60);
+                color: var(--white);
+            }
+        }
+        div.blocos div.text1 form, div.blocos div.text2 form{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            ul{
+                margin-left: 20px;
+                span.erros{
+                    color: red;
+                    display: none;
+                    font-size: 20px;
+                }
+                input.labels1, input.labels2{
+                    width: 212px;
+                }
+                label, input{
+                    margin-bottom: 50px;
+                    flex-direction: column;
+                    display: block;
+                    text-align: right;
+                    font-size: 15px;
+                }
+                input{
+                    border: none;
+                    border-bottom-style: solid;
+                    border-bottom-color: var(--cores-es);
+                    border-bottom-width: 2px;
+                    background-color: var(--gris60);
+                    color: var(--gris10);
+                    text-align: center;
+                }
+                div.vision{
+                    display: flex;
+                    justify-content: space-between;
+                    justify-content: flex-start;
+                    button{
+                        cursor: pointer;
+                        width: 10px;
+                        height: 10px;
+                        border: none;
+                    }
+                    #image{
+                        background-color: var(--gris60);
+                        background-image: var(--img-eye); /* NÂO FUNCIONA */
+                        background-repeat: no-repeat;
+                        background-size: 20px 20px;
+                        background-position: center;
+                        padding: 10px 10px;
+                        border-bottom: 1px solid var(--cores-es);
+                    }
+                }
+            }
         }
     }
 }
 
-main.login section.logado{
-    
+section.personal{
+    padding: 10%;
+    align-items: right;
+    margin-left: 38.3%;
+    overflow: auto;
+    box-sizing: border-box;
+    flex: 1;
+    margin-right: 15px;
 }
+
 
 /* MAIN CAT */
