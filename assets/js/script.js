@@ -21,7 +21,9 @@ function modos(){
     const login = document.getElementById('login');
     const maleta = document.getElementById('maleta');
     const select = document.getElementsByClassName('id_select'); // Não funciona (ainda)
+    const logos = document.getElementById('logo')
     // const senha = document.getElementById('senha');
+
     if (!ativar_modos){
         document.documentElement.style.setProperty('--base-negro', '#ffffff');
         document.documentElement.style.setProperty('--gris100', '#f2f2f2');
@@ -36,6 +38,7 @@ function modos(){
         login.src = 'assets/images/login-cl.png';
         maleta.src = 'assets/images/maleta-cl.png';
         select.src = 'assets/images/select-cl.png';
+        logos.src = 'assets/images/logo-cl.png'; // não funciona (ainda)
         document.documentElement.style.setProperty('--img-eye', 'url(../images/eye-laranja.png)');
     }
     else{
@@ -52,13 +55,14 @@ function modos(){
         login.src = 'assets/images/login-es.png';
         maleta.src = 'assets/images/maleta-es.png';
         select.src = 'assets/images/select-es.png';
+        logos.src = 'assets/images/logo-es.png';
         document.documentElement.style.setProperty('--img-eye', "url('../images/eye-azul.png')");
     }
 }
 
 // trocar imagens
 document.addEventListener('DOMContentLoaded', (event) => {
-    const imagens = document.querySelectorAll('.img-logo'); // Seleciona todos os elementos com a classe 'logo'
+    const imagens = document.querySelectorAll('.img-logo'); // Seleciona todos os elementos com a classe 'img-logo'
     
     imagens.forEach(imagem => {
         imagem.addEventListener('mouseenter', () => {
@@ -109,3 +113,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+
+//print da tela do documento
+// window.print()
