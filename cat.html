@@ -19,11 +19,53 @@
                 <a href="./main.html"><h1 class="h1">ProSafe - CAT</h1></a>
             </div>
         </header>
-        <main></main>
+        <main class="cat-inicio">
+            <div class="margin"></div>
+            <section class="titulo sec1">
+                <h2>Tipo de comunicação de acidente de trabalho</h2>
+                <div class="cat-div">
+                    <p>* Tipo de CAT:</p>
+                    <select class="selects" name="tipoCat">
+                        <option value="1">Inicial</option>
+                        <option value="2">Reabertura</option>
+                        <option value="3">Comunicação de Óbito</option>
+                    </select>
+                </div>
+            </section>
+            <section class="titulo sec2">
+                <h2>Pesquisar</h2>
+                <div class="cat-sec2">
+                    <!-- Primeira Parte -->
+                    <p>* Emitente:</p> <!-- Inicial -->
+                    <p>* Filiação do Acidentado:</p> <!-- Inicial -->
+
+                    <p>* Número da CAT:</p> <!-- Reabertura / Comunicação de Óbito -->
+
+                    <p>* Data Óbito</p> <!-- Comunicação de Óbito -->
+
+                    <!-- Segunda Parte -->
+                    <p>* Tipo Empregador:</p> <!-- Pergunta central -->
+                    <p>* Número CNPJ:</p> <!-- CNPJ -->
+                    <p>* Número CNPJ:</p> <!-- Demais Opções, só uma visível -->
+                    <p>* Número CEI:</p>
+                    <p>* Número CPF:</p>
+                    <p>* Número NIT/PIS/PASEP:</p>
+                    <p>* Número CAEPF:</p>
+                    <p>* Número CNO:</p>
+
+                    <!-- Terceira Perte (Sempre aparece) -->
+                    <p>* CPF do acidentado:</p>
+                    <p>* Data do acidente:</p>
+                </div>
+                <div class="cat-sec2">
+                    <select name=""></select>
+                </div>
+            </section>
+        </main>
         <footer>
             <div class="div1">
                 <h2>Dev. Full-Stack</h2>
-                <li>Bianca Araujo Coelho <a href="https://github.com/BrytanniADJ">Github</a> | <a href="">LinkedIn</a></li>
+                <li>Bianca Araujo Coelho <a href="https://github.com/BrytanniADJ">Github</a> <a href="">LinkedIn</a></li>
                 <li>Lucas Bernardo Ribeiro Siqueira <a href="https://github.com/RickSanchez1029">Github</a> <a href="https://linkedin.com/in/lucas-ribeiro-23a39a302">LinkedIn</a></li>
                 <li>Maria Eduarda Fernandes Costa</li>
             </div>
@@ -40,15 +82,15 @@
                 <img src="./assets/images/Senac_logo.svg.png" alt="Logo Senac" title="Logo Senac">
                 <h2>Senac em Minas</h2>
                 <div class="senac">
-                    <img src="./assets/images/local-es.png" alt="Ícone de Localização">
+                    <img class="icon" data-type="local" src="./assets/images/local-es.png" alt="Ícone de Localização">
                     <p>Rua José Duarte de Paiva, 775 - Santa Luzia, Sete Lagoas - MG</p>
                 </div>
                 <div class="senac">
-                    <a href="https://www.facebook.com/senacminas/"><img src="./assets/images/facebook-es.png" alt="Facebook"></a>
-                    <a href="https://www.twitter.com/senacminas/"><img src="./assets/images/twitter-es.png" alt="Twitter"></a>
-                    <a href="https://www.youtube.com/user/SenacMinasOficial"><img src="./assets/images/youtube-es.png" alt="Youtube"></a> 
-                    <a href="http://www.linkedin.com/company/senac-minas"><img src="./assets/images/linkedin-es.png" alt="LinkedIn"></a>
-                    <a href="https://www.instagram.com/senacminas/"><img src="./assets/images/instagram-es.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/senacminas/"><img class="icon" data-type="facebook" src="./assets/images/facebook-es.png" alt="Facebook"></a>
+                    <a href="https://www.twitter.com/senacminas/"><img class="icon" data-type="twitter" src="./assets/images/twitter-es.png" alt="Twitter"></a>
+                    <a href="https://www.youtube.com/user/SenacMinasOficial"><img class="icon" data-type="youtube" src="./assets/images/youtube-es.png" alt="Youtube"></a>
+                    <a href="http://www.linkedin.com/company/senac-minas"><img class="icon" data-type="linkedin" src="./assets/images/linkedin-es.png" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/senacminas/"><img class="icon" data-type="instagram" src="./assets/images/instagram-es.png" alt="Instagram"></a>
                 </div>
             </div> <!--Senac-->
         </footer>

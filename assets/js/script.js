@@ -6,7 +6,7 @@ let login_senha = false;
 // let login_senha = false;
 
 function login(){
-    var login_nome = document.getElementById('login');
+    const login_nome = document.getElementById('login');
     if(login == false){
         login_nome.classList.add('login'); // classe por padrão
     }else{
@@ -14,17 +14,12 @@ function login(){
     }
 }
 
-// Modo claro/ escuro
+// Modo claro / escuro - cores
 function modos(){
     ativar_modos = !ativar_modos;
     cor_logo = !cor_logo;
-    const login = document.getElementById('login');
-    const maleta = document.getElementById('maleta');
-    const select = document.getElementsByClassName('id_select'); // Não funciona (ainda)
-    const logos = document.getElementById('logo')
-    // const senha = document.getElementById('senha');
-
-    if (!ativar_modos){
+    
+    if (ativar_modos == false){
         document.documentElement.style.setProperty('--base-negro', '#ffffff');
         document.documentElement.style.setProperty('--gris100', '#f2f2f2');
         document.documentElement.style.setProperty('--gris90', '#f8f8fa');
@@ -35,11 +30,6 @@ function modos(){
         document.documentElement.style.setProperty('--gris5', '#1f2328');
         document.documentElement.style.setProperty('--cores', '#ff6b00');
         document.documentElement.style.setProperty('--cores-es', '#ffa05c');
-        login.src = 'assets/images/login-cl.png';
-        maleta.src = 'assets/images/maleta-cl.png';
-        select.src = 'assets/images/select-cl.png';
-        logos.src = 'assets/images/logo-cl.png'; // não funciona (ainda)
-        document.documentElement.style.setProperty('--img-eye', 'url(../images/eye-laranja.png)');
     }
     else{
         document.documentElement.style.setProperty('--base-negro', '#010409');
@@ -48,16 +38,26 @@ function modos(){
         document.documentElement.style.setProperty('--gris80', '#242424'); // modo escuro
         document.documentElement.style.setProperty('--gris70', '#2b2b2b');
         document.documentElement.style.setProperty('--gris60', '#383838');
-        document.documentElement.style.setProperty('--gris10', '#a0a9b2');
+        document.documentElement.style.setProperty('--gris10', '#d4d4d4');
         document.documentElement.style.setProperty('--gris5', '#ececea');
         document.documentElement.style.setProperty('--cores', '#0094ff');
         document.documentElement.style.setProperty('--cores-es', '#005694');
-        login.src = 'assets/images/login-es.png';
-        maleta.src = 'assets/images/maleta-es.png';
-        select.src = 'assets/images/select-es.png';
-        logos.src = 'assets/images/logo-es.png';
-        document.documentElement.style.setProperty('--img-eye', "url('../images/eye-azul.png')");
     }
+    modos_img();
+}
+
+// trocar imagens
+function modos_img(){
+    const icons = document.querySelectorAll(".icon"); // seleciona todos os documentos com Class=".icon"
+
+    icons.forEach((icon) => { // Transforma cada célula do vetor icons em uma variável icon
+        const type = icon.getAttribute("data-type"); // pega o atributo que tem o data-type
+        if(ativar_modos === false){
+            icon.src = `assets/images/${type}-cl.png`;
+        }else{
+            icon.src = `assets/images/${type}-es.png`;
+        }
+    });
 }
 
 // trocar imagens
