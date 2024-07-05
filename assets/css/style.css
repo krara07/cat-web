@@ -57,6 +57,16 @@ label{
     color: var(--gris5);
 }
 
+.display-center{
+    display: flex;
+    justify-content: center;
+}
+
+.max-width-cat{
+    min-width: 25vh;
+    max-width: 25vh;
+}
+
 /* BODY */
 body{
     background-color: var(--base-negro);
@@ -403,7 +413,7 @@ main.login section.login{
 
 /* PÁGINA CAT ----------------------------------------------------------------------------------------- */
 
-main.cat-inicio{
+main.cat-inicio{ /* Geral 1*/
     align-items: center;
     height: 100%;
     section.sec1{
@@ -411,16 +421,23 @@ main.cat-inicio{
     }
     section.sec2{
         margin-top: 30px;
-        div.cat-sec2{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 5vh;
+        div{
+            div.cat-sec2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 5vh;
+                input{
+                    margin: 5px 0px;
+                    background-color: var(--gris70);
+                    border-color: var(--gris50);
+                    color: var(--gris10);
+                }
+            }
         }
     }
 }
-main.cat-inicio section.titulo{
+main.cat-inicio section.titulo{ /* Geral 2 */
     margin-inline: 25vh;
     border: 1px solid var(--gris60);
     position: relative;
@@ -444,11 +461,48 @@ main.cat-inicio section.titulo{
         font-size: 15px;
         color: var(--gris10);
         margin-right: 10px;
+        line-height: 25px;
+        text-align: right;
     }
     select{
         background-color: var(--gris70);
         border: 1px solid var(--gris60);
         color: var(--gris10);
+        margin: 5px 0px;
+    }
+}
+
+main.cat-inicio section.titulo div.cat-sec2{ /* Específico */
+    input.date{
+        font-size: 15px;
+        min-width: 24.5vh;
+    }
+    div#numero-cat{
+        input.input-cat1{
+            max-width: 8vh;
+        }
+        input.input-cat2{
+            max-width: 11vh;
+        }
+        input.input-cat3{
+            max-width: 3.5vh;
+            text-align: center;
+        }
+    }
+    input.cpf-cat-pt3{
+        min-width: 24vh;
+    }
+}
+
+main.cat-inicio{ /* None & Block */
+    .inicial-cat{
+        display: none;
+    }
+    .reabertura-cat{
+        display: none;
+    }
+    .obito-cat{
+        display: none;
     }
 }
 

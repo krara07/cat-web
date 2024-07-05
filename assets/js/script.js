@@ -98,7 +98,7 @@ window.addEventListener('scroll', function(){
     }
 });
 
-//checkbox marcado para ver senha
+// checkbox marcado para ver senha
 document.addEventListener('DOMContentLoaded', (event) => {
     const check = document.getElementById('ver_senha');
     const senha = document.getElementById('password');
@@ -114,6 +114,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+// cat-inicio
 
+document.getElementById("tipoCat").addEventListener('change', function(){
+    const tipoCat = this.value;
+
+    const inicial = document.querySelectorAll(".inicial-cat");
+    const reaber = document.querySelectorAll(".reabertura-cat");
+    const obito = document.querySelectorAll(".obito-cat");
+
+    // reinicia deixando tudo visivel quando mudado
+    inicial.forEach(function(inicial){
+        inicial.style.display = "none";
+    });
+    reaber.forEach(function(reaber){
+        reaber.style.display = "none";
+    });
+    obito.forEach(function(obito){
+        obito.style.display = "none";
+    });
+
+    if(tipoCat == "0"){
+        alert("Uma opção precisa ser selecionada")
+    }else if(tipoCat == "1"){
+        inicial.forEach(function(inicial){
+            inicial.style.display = "block";
+        });
+    }else if(tipoCat == "2"){
+        reaber.forEach(function(reaber){
+            reaber.style.display = "block";
+        });
+    }else{
+        obito.forEach(function(obito){
+            obito.style.display = "block";
+        });
+    }
+});
+
+document.getElementById("tipo_empre-cat").addEventListener('change', function(){
+    const tipo_empre = this.value;
+
+    const cnpj = document.querySelectorAll(".cnpj-cat");
+    const cei = document.querySelectorAll(".cei-cat");
+    const cpf = document.querySelectorAll(".cpf-cat");
+});
 //print da tela do documento
 // window.print()

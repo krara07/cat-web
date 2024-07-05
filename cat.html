@@ -25,7 +25,8 @@
                 <h2>Tipo de comunicação de acidente de trabalho</h2>
                 <div class="cat-div">
                     <p>* Tipo de CAT:</p>
-                    <select class="selects" name="tipoCat">
+                    <select class="max-width-cat selects" name="tipoCat" id="tipoCat">
+                        <option value="0">Selecione o tipo da CAT</option>
                         <option value="1">Inicial</option>
                         <option value="2">Reabertura</option>
                         <option value="3">Comunicação de Óbito</option>
@@ -34,31 +35,76 @@
             </section>
             <section class="titulo sec2">
                 <h2>Pesquisar</h2>
-                <div class="cat-sec2">
-                    <!-- Primeira Parte -->
-                    <p>* Emitente:</p> <!-- Inicial -->
-                    <p>* Filiação do Acidentado:</p> <!-- Inicial -->
+                <div class="display-center">
+                    <div class="cat-sec2">
+                        <!-- Primeira Parte -->
+                        <p class="inicial-cat">* Emitente:</p> <!-- Inicial -->
+                        <p class="inicial-cat">* Filiação do Acidentado:</p> <!-- Inicial -->
+    
+                        <p class="reabertura-cat obito-cat">* Número da CAT:</p> <!-- Reabertura / Comunicação de Óbito -->
+    
+                        <p id="obito-cat" class="obito-cat">* Data Óbito</p> <!-- Comunicação de Óbito -->
+    
+                        <!-- Segunda Parte -->
+                        <p id="central-cat">* Tipo Empregador:</p> <!-- Pergunta central -->
 
-                    <p>* Número da CAT:</p> <!-- Reabertura / Comunicação de Óbito -->
+                        <p class="cnpj-cat" id="cnpj-cat" style="display: none;">* Número CNPJ:</p> <!-- Demais Opções, só uma visível -->
+                        <p id="cei-cat" style="display: none;">* Número CEI:</p>
+                        <p id="cpf-cat" style="display: none;">* Número CPF:</p>
+                        <p id="nit-cat" style="display: none;">* Número NIT/PIS/PASEP:</p>
+                        <p id="caepf-cat" style="display: none;">* Número CAEPF:</p>
+                        <p id="cno-cat">* Número CNO:</p>
+    
+                        <!-- Terceira Perte (Sempre aparece) -->
+                        <!-- <p>* CPF do acidentado:</p>
+                        <p>* Data do acidente:</p> -->
+                    </div>
+                    <div class="cat-sec2">
+                        <!-- Primeira Parte -->
+                        <select class="inicial-cat max-width-cat" name="emitente-CAT" id="emitente-cat"> <!-- Inicial -->
+                            <option value="0">Selecione o Emitente da CAT</option>
+                            <option value="1">Empregador</option>
+                            <option value="2">Empregador Doméstico</option>
+                            <option value="3">Trabalhador</option>
+                            <option value="4">Sindicato</option>
+                            <option value="5" title="Tomador de serviço avulso ou Órgão gestor de mão de obra">TSA ou OGMO</option>
+                            <option value="6">Dependentes</option>
+                            <option value="7">Autoridade Pública</option>
+                            <option value="8">Médico</option>
+                        </select>
 
-                    <p>* Data Óbito</p> <!-- Comunicação de Óbito -->
+                        <select class="inicial-cat max-width-cat" name="filiacao-CAT" id="filiacao-cat"> <!-- Inicial -->
+                            <option value="0">Selecione a Filiação do Acidentado</option>
+                            <option value="1">1 - Empregado</option>
+                            <option value="2">2 - Trabalhador Avulso</option>
+                            <option value="3">7 - Segurado Especial</option>
+                            <option value="4">9 - Empregado Doméstico</option>
+                        </select>
 
-                    <!-- Segunda Parte -->
-                    <p>* Tipo Empregador:</p> <!-- Pergunta central -->
-                    <p>* Número CNPJ:</p> <!-- CNPJ -->
-                    <p>* Número CNPJ:</p> <!-- Demais Opções, só uma visível -->
-                    <p>* Número CEI:</p>
-                    <p>* Número CPF:</p>
-                    <p>* Número NIT/PIS/PASEP:</p>
-                    <p>* Número CAEPF:</p>
-                    <p>* Número CNO:</p>
+                        <div class="display-center reabertura-cat obito-cat" id="numero-cat" title="Digite apenas números"> <!-- Reabertura / Comunicação de Óbito -->
+                            <input type="text" maxlength="4" class="input-cat1">
+                            <input type="text" maxlength="6" class="input-cat2">
+                            <input type="text" maxlength="1" class="input-cat3">
+                        </div>
 
-                    <!-- Terceira Perte (Sempre aparece) -->
-                    <p>* CPF do acidentado:</p>
-                    <p>* Data do acidente:</p>
-                </div>
-                <div class="cat-sec2">
-                    <select name=""></select>
+                        <input type="date" class="date data_obito-cat obito-cat"> <!-- Comunicação de Óbito -->
+
+                        <select name="tipo_empre-cat" id="tipo_empre-cat" class="max-width-cat">
+                            <option value="1">1 - CNPJ</option>
+                            <option value="2">2 - CEI</option>
+                            <option value="3">3 - CPF</option>
+                            <option value="4">4 - NIT/PIS/PASEP</option>
+                            <option value="5">5 - CAEPF</option>
+                            <option value="6">6 - CNO</option>
+                        </select>
+
+                        <input class="cnpj-cat" type="text" maxlength="14">
+                        <input class="cei-cat" type="text" maxlength="12">
+                        <input class="cpf-cat" type="text">
+                        <!-- Terceira Parte -->
+                        <!-- <input class="cpf-cat-pt3" type="text" maxlength="11">
+                        <input class="date" type="date"> -->
+                    </div>
                 </div>
             </section>
         </main>
