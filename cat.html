@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
         <title>ProSafe - CAT</title> <!-- Título -->
     </head>
     <body>
@@ -33,7 +35,7 @@
                     </select>
                 </div>
             </section>
-            <section class="titulo sec2">
+            <section class="titulo sec2" id="cat-part2" style="visibility: hidden;">
                 <h2>Pesquisar</h2>
                 <div class="display-center">
                     <div class="cat-sec2">
@@ -48,18 +50,18 @@
                         <!-- Segunda Parte -->
                         <p id="central-cat">* Tipo Empregador:</p> <!-- Pergunta central -->
 
-                        <p class="cnpj-cat" id="cnpj-cat" style="display: none;">* Número CNPJ:</p> <!-- Demais Opções, só uma visível -->
-                        <p id="cei-cat" style="display: none;">* Número CEI:</p>
-                        <p id="cpf-cat" style="display: none;">* Número CPF:</p>
-                        <p id="nit-cat" style="display: none;">* Número NIT/PIS/PASEP:</p>
-                        <p id="caepf-cat" style="display: none;">* Número CAEPF:</p>
-                        <p id="cno-cat">* Número CNO:</p>
+                        <p class="cnpj-cat" style="display: none;">* Número CNPJ:</p> <!-- Demais Opções, só uma visível -->
+                        <p class="cei-cat" style="display: none;">* Número CEI:</p>
+                        <p class="cpf-cat" style="display: none;">* Número CPF:</p>
+                        <p class="nit-cat" style="display: none;">* Número NIT/PIS/PASEP:</p>
+                        <p class="caepf-cat" style="display: none;">* Número CAEPF:</p>
+                        <p class="cno-cat" style="display: none;">* Número CNO:</p>
     
                         <!-- Terceira Perte (Sempre aparece) -->
-                        <!-- <p>* CPF do acidentado:</p>
-                        <p>* Data do acidente:</p> -->
+                        <p>* CPF do acidentado:</p>
+                        <p>* Data do acidente:</p>
                     </div>
-                    <div class="cat-sec2">
+                    <div class="cat-sec2 txt-column">
                         <!-- Primeira Parte -->
                         <select class="inicial-cat max-width-cat" name="emitente-CAT" id="emitente-cat"> <!-- Inicial -->
                             <option value="0">Selecione o Emitente da CAT</option>
@@ -89,7 +91,8 @@
 
                         <input type="date" class="date data_obito-cat obito-cat"> <!-- Comunicação de Óbito -->
 
-                        <select name="tipo_empre-cat" id="tipo_empre-cat" class="max-width-cat">
+                        <select name="tipo_empre-cat" id="tipo_empre-cat">
+                            <option value="0">Selecione uma Opção</option>
                             <option value="1">1 - CNPJ</option>
                             <option value="2">2 - CEI</option>
                             <option value="3">3 - CPF</option>
@@ -98,13 +101,54 @@
                             <option value="6">6 - CNO</option>
                         </select>
 
-                        <input class="cnpj-cat" type="text" maxlength="14">
-                        <input class="cei-cat" type="text" maxlength="12">
-                        <input class="cpf-cat" type="text">
+                        <input type="text" id="cnpj-mask" class="cnpj-cat cnpj-mask" style="display: none;">
+                        <input type="text" id="cei-mask" class="cei-cat cei-mask" style="display: none;">
+                        <input type="text" id="cpf-mask" class="cpf-cat cpf-mask" style="display: none;">
+                        <input type="text" id="nit-mask" class="nit-cat nit-mask" style="display: none;">
+                        <input type="text" id="caepf-mask" class="caepf-cat caepf-mask" style="display: none;">
+                        <input type="text" id="cno-mask" class="cno-cat cno-mask" style="display: none;">
+
+
                         <!-- Terceira Parte -->
-                        <!-- <input class="cpf-cat-pt3" type="text" maxlength="11">
-                        <input class="date" type="date"> -->
+                        <input class="cpf-cat-pt3 cpf-mask" type="text" maxlength="11">
+                        <input class="date" type="date">
                     </div>
+                </div>
+                <button class="button-click">Próximo</button>
+            </section>
+            <section class="titulo sec3 display-justify">
+                <h2>Empregador</h2>
+                <div class="display-center">
+                    <section class="cat-sec3">
+                        <p>texto</p>
+                        <p>texto</p>
+                        <p>texto</p>
+                        <p>texto</p>
+                        <p>texto</p>
+                    </section>
+                    <section class="cat-sec3">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </section>
+                </div>
+                <div class="display-center">
+                    <section class="cat-sec3">
+                        <p>texto</p>
+                        <p>texto</p>
+                        <p>texto</p>
+                        <p>texto</p>
+                        <p>texto</p>
+                    </section>
+                    <section class="cat-sec3">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </section>
                 </div>
             </section>
         </main>
@@ -143,3 +187,13 @@
         <script src="./assets/js/script.js"></script> <!-- Caminho do script do site -->
     </body>
 </html>
+
+<!--
+quando um input é preenchido, em alguns sites eles possuem uma estrutura que
+vai sumindo conforme digitamos ou ela é fixa mesmo quando o input é preenchido,
+por exemplo: um input que aceita no maximo 11 dígitos onde é inserido o cpf.
+Dentro do input já possui o '-' e '.'
+Conforme o usuário digita os números, ele vai se encaixando na estrutura deixando-os assim:
+999.999.999-99. Como faz isso?
+
+-->
