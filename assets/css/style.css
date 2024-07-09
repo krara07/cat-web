@@ -35,7 +35,7 @@ header.scrolled,
 main.login section,
 input,
 label{
-    transition: background-color 1.0s, color 0.5s;
+    transition: background-color 1.0s, color 0.5s, border-color 0.5s;
 }
 
 /* RE-Class */
@@ -455,6 +455,7 @@ main.cat-inicio{ /* Geral 1*/
         }
     }
 }
+
 main.cat-inicio section.titulo{ /* Geral 2 */
     margin-inline: 25vh;
     border: 1px solid var(--gris60);
