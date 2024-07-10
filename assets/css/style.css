@@ -57,6 +57,10 @@ label{
     color: var(--gris5);
 }
 
+.button-click:hover{
+    background-color: var(--gris60);
+}
+
 .display-center{
     display: flex;
     justify-content: center;
@@ -279,9 +283,6 @@ main.index section.iniciar{                /* SECTION.INICIAR */
         a button{
             font-size: 2vh;
             padding: 1vh 5vh;
-        }
-        a button:hover{
-            background-color: var(--gris60);
         }
     }
 }

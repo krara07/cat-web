@@ -130,6 +130,8 @@ document.getElementById("tipoCat").addEventListener('change', function(){
 
     obito.forEach(function(obito){obito.style.display = "none";});
 
+    cat_part2.style.visibility = "visible";
+    
     if(tipoCat == 1){
         inicial.forEach(function(inicial){
             inicial.style.display = "block";
@@ -143,9 +145,9 @@ document.getElementById("tipoCat").addEventListener('change', function(){
             obito.style.display = "block";
         });
     }else{
-        alert("Uma opção precisa ser selecionada")
+        cat_part2.style.visibility = "hidden";
+        alert("Uma opção precisa ser selecionada");
     }
-    cat_part2.style.visibility = "visible";
 
     $(document).ready(function(){
         $(".cpf-mask").inputmask("999.999.999-99");
@@ -181,8 +183,8 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
         cnpj.forEach(function(cnpj){
             cnpj.style.display = "block";
         });
-        $(document).ready(function(){
-            $(".cnpj-mask").inputmask("99.999.999/9999-99"); /* Inputmask */
+        $(document).ready(function(){ /* InputMask */ 
+            $(".cnpj-mask").inputmask("99.999.999/9999-99");
         });
     }else if(tipo_empre == 2){
         cei.forEach(function(cei){
@@ -224,7 +226,6 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
     }
 });
 
-//inputmask
 
 
 
