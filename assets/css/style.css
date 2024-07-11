@@ -64,15 +64,20 @@ label{
 .display-center{
     display: flex;
     justify-content: center;
+    gap: 1vh;
 }
 
 .display-justify{
     display: flex;
     justify-content: center;
-    gap: 10vh;
+    gap
     div{
         margin: 0px 10vh;
     }
+}
+
+.display-duplo{
+    gap: 20vh;
 }
 
 .max-width-cat{
@@ -441,10 +446,9 @@ main.cat-inicio{ /* Geral 1*/
         margin-top: 30px;
         div{
             div.cat-sec2,
-            section.cat-sec3{
+            div.cat-sec3{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 margin-top: 3vh;
                 input{
                     margin: 5px 0px;
@@ -459,9 +463,12 @@ main.cat-inicio{ /* Geral 1*/
 
 main.cat-inicio section.titulo{ /* Geral 2 */
     margin-inline: 25vh;
-    border: 1px solid var(--gris60);
+    padding-top: 5px;
+    /* border: 1px solid var(--gris60); */
     position: relative;
     padding-bottom: 2vh;
+    box-shadow: 0 0 0.5vh 1px var(--gris50);
+    border-radius: 5px;
     button{
         margin-left: 5vh;
     }
@@ -469,7 +476,7 @@ main.cat-inicio section.titulo{ /* Geral 2 */
         position: absolute;
         padding: 10px 5px;
         background-color: var(--base-negro);
-        top: -20px;
+        top: -25px;
         font-size: 25px;
         left: 20px;
         color: var(--gris10);
@@ -529,5 +536,11 @@ main.cat-inicio{ /* None & Block */
         display: none;
     }
 }
+
+main.cat-inicio section.titulo#campo3{
+    input{
+        min-width: 20vh;
+    }
+} 
 
 /* PÁGINA CAT 2*/

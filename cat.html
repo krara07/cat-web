@@ -35,7 +35,7 @@
                     </select>
                 </div>
             </section>
-            <section class="titulo sec2" id="cat-part2" style="visibility: hidden;">
+            <section class="titulo sec2" id="cat-part2"> <!-- style="visibility: hidden;" -->
                 <h2>Pesquisar</h2>
                 <div class="display-center">
                     <div class="cat-sec2">
@@ -84,12 +84,12 @@
                         </select>
 
                         <div class="display-center reabertura-cat obito-cat" id="numero-cat" title="Digite apenas números"> <!-- Reabertura / Comunicação de Óbito -->
-                            <input type="text" maxlength="4" class="input-cat1">
-                            <input type="text" maxlength="6" class="input-cat2">
-                            <input type="text" maxlength="1" class="input-cat3">
+                            <input id="rea-obi1" type="text" maxlength="4" class="input-cat1">
+                            <input id="rea-obi2" type="text" maxlength="6" class="input-cat2">
+                            <input id="rea-obi3" type="text" maxlength="1" class="input-cat3">
                         </div>
 
-                        <input type="date" class="date data_obito-cat obito-cat"> <!-- Comunicação de Óbito -->
+                        <input id="obito-mask" type="date" class="date data_obito-cat obito-cat"> <!-- Comunicação de Óbito -->
 
                         <select name="tipo_empre-cat" id="tipo_empre-cat">
                             <option value="0">Selecione uma Opção</option>
@@ -109,45 +109,77 @@
                         <input type="text" id="cno-mask" class="cno-cat cno-mask" style="display: none;">
 
                         <!-- Terceira Parte -->
-                        <input class="cpf-cat-pt3 cpf-mask" type="text" maxlength="11">
-                        <input class="date" type="date">
+                        <input id="cpf_obri" class="cpf-cat-pt3 cpf-mask" type="text">
+                        <input id="date_obri" class="date date-obri" type="date">
                     </div>
                 </div>
-                <button class="button-click">Próximo</button>
+                <button onclick="cat_proximo1()" class="button-click">Próximo</button>
             </section>
-            <section class="titulo sec3 display-justify">
+            <section id="campo3" class="titulo sec3 display-center"> <!-- style="display:none; "-->
                 <h2>Empregador</h2>
-                <div class="display-center">
-                    <section class="cat-sec3">
-                        <p>texto</p>
-                        <p>texto</p>
-                        <p>texto</p>
-                        <p>texto</p>
-                        <p>texto</p>
-                    </section>
-                    <section class="cat-sec3">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                    </section>
-                </div>
-                <div class="display-center">
-                    <section class="cat-sec3">
-                        <p>texto</p>
-                        <p>texto</p>
-                        <p>texto</p>
-                        <p>texto</p>
-                        <p>texto</p>
-                    </section>
-                    <section class="cat-sec3">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                    </section>
+                <div class="display-center display-duplo">
+                    <div class="display-center">
+                        <div class="cat-sec2">
+                            <p>CEP:</p>
+                            <p>Estado:</p>
+                            <p>Cidade:</p>
+                            <p>Bairro:</p>
+                            <p>Rua:</p>
+                        </div>
+                        <div class="txt-column cat-sec2">
+                            <input id="cep-pesquisa" class="cep-mask" type="text">
+                            <input type="text">
+                            <!-- <select name="estado">
+                                <option value="0">Selecione o estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select> -->
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="display-center">
+                        <div class="cat-sec2">
+                            <p>Tipo/Num doc:</p>
+                            <p>CNAE:</p>
+                            <p>Telefone:</p>
+                            <p>Razão Social:</p>
+                            <p>Nome:</p>
+                        </div>
+                        <div class="txt-column cat-sec2">
+                            <input type="text">
+                            <input class="cnae-mask" type="text">
+                            <input class="tell-mask" type="text">
+                            <input type="text">
+                            <input type="email">
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

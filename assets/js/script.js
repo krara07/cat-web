@@ -158,7 +158,7 @@ document.getElementById("tipoCat").addEventListener('change', function(){
 document.getElementById("tipo_empre-cat").addEventListener('change', function(){
     const tipo_empre = this.value;
 
-    const cnpj = document.querySelectorAll(".cnpj-cat");
+    const cnpj = document.querySelectorAll(".cnpj-cat"); // campos que mudam
     const cei = document.querySelectorAll(".cei-cat");
     const cpf = document.querySelectorAll(".cpf-cat");
     const nit = document.querySelectorAll(".nit-cat");
@@ -166,7 +166,6 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
     const cno = document.querySelectorAll(".cno-cat");
 
     //reinicia deixado tudo invisível quando mudado
-
     cnpj.forEach(function(cnpj){cnpj.style.display = "none";});
 
     cei.forEach(function(cei){cei.style.display = "none";});
@@ -224,7 +223,41 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
     }else{
         alert("Uma opção precisa ser selecionada")
     }
+
+    $(document).ready(function(){
+        $(".cep-mask").inputmask("99999-999");
+    });
+    $(document).ready(function(){
+        $(".cnae-mask").inputmask("9999-9/99");
+    });
+    $(document).ready(function(){
+        $(".tell-mask").inputmask("(99) 9 9999-9999");
+    });
 });
+
+document.getElementById("cep-pesquisa").addEventListener('change'), function(){
+    var cep = document.getElementById('cep-pesquisa').value.replace(/\D/g, '');
+
+    // var url = 
+}
+
+
+function cat_proximo1(){
+    const campo3 = document.getElementById("campo3"); // Elemento que será exibido ou oculto
+    
+    const campos = document.querySelectorAll('#cnpj-mask, #cei-mask, #cpf-mask, #nit-mask, #caepf-mask, #cno-mask');
+    let preenchidos = false;
+
+    campos.forEach((campo) => {
+        // Exclui caracteres não numéricos e verifica se há pelo menos 11 caracteres numéricos visíveis
+        if(campo.value.replace(/[^0-9]/g, '').length >= 11){
+            preenchidos = true;
+        }
+    });
+    if(preenchidos){
+        campo3.style.display = "flex";
+    }
+}
 
 
 
