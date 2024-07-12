@@ -70,7 +70,6 @@ label{
 .display-justify{
     display: flex;
     justify-content: center;
-    gap
     div{
         margin: 0px 10vh;
     }
@@ -537,10 +536,18 @@ main.cat-inicio{ /* None & Block */
     }
 }
 
-main.cat-inicio section.titulo#campo3{
+main.cat-inicio section.titulo#campo3{ /* Campo 3 */
     input{
         min-width: 20vh;
     }
-} 
+}
+
+main.cat-inicio section.titulo#campo4{
+    .campo4{
+        display: flex;
+        justify-content: center;
+        gap: 20vh;
+    }
+}
 
 /* PÁGINA CAT 2*/

@@ -151,6 +151,28 @@ document.getElementById("tipoCat").addEventListener('change', function(){
 
     $(document).ready(function(){
         $(".cpf-mask").inputmask("999.999.999-99");
+        $(".nit-mask").inputmask("999.99999.99-9");
+        $(".ctps-mask").inputmask("9999999/9999");
+        $(".cbo-mask").inputmask("9999-99");
+        $(".cep-mask").inputmask("99999-999");
+        $(".cnpj-mask").inputmask("99.999.999/9999-99");
+        $(".cei-mask").inputmask("99.999.99999/99");
+        $(".caepf-mask").inputmask("999.999.999/999-99");
+        $(".cno-mask").inputmask("99.999.999999/99");
+        $(".cnae-mask").inputmask("9999-9/99");
+        $(".tell-mask").inputmask("(99) 9 9999-9999");
+        $(".rg-mask").inputmask("99.999.999-9");
+        $(document).ready(function(){
+            $(".remu-mask").inputmask({
+                alias: "currency",
+                prefix: "R$ ",
+                groupSeparator: ".",
+                radixPoint: ",",
+                digits: 2,
+                autoGroup: true,
+                rightAlign: false
+            });
+        });
     });
 });
 
@@ -172,8 +194,6 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
 
     cpf.forEach(function(cpf){cpf.style.display = "none";});
 
-    nit.forEach(function(nit){nit.style.display = "none";});
-
     caepf.forEach(function(caepf){caepf.style.display = "none";});
 
     cno.forEach(function(cno){cno.style.display = "none";});
@@ -182,65 +202,35 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
         cnpj.forEach(function(cnpj){
             cnpj.style.display = "block";
         });
-        $(document).ready(function(){ /* InputMask */ 
-            $(".cnpj-mask").inputmask("99.999.999/9999-99");
-        });
     }else if(tipo_empre == 2){
         cei.forEach(function(cei){
             cei.style.display = "block";
-        });
-        $(document).ready(function(){
-            $(".cei-mask").inputmask("99.999.99999/99");
         });
     }else if(tipo_empre == 3){
         cpf.forEach(function(cpf){
             cpf.style.display = "block";
         });
-        $(document).ready(function(){
-            $(".cpf-mask").inputmask("999.999.999-99");
-        });
     }else if(tipo_empre == 4){
         nit.forEach(function(nit){
             nit.style.display = "block";
-        });
-        $(document).ready(function(){
-            $(".nit-mask").inputmask("999.99999.99-9");
         });
     }else if(tipo_empre == 5){
         caepf.forEach(function(caepf){
             caepf.style.display = "block";
         });
-        $(document).ready(function(){
-            $(".caepf-mask").inputmask("999.999.999/999-99");
-        });
     }else if(tipo_empre == 6){
         cno.forEach(function(cno){
             cno.style.display = "block";
         });
-        $(document).ready(function(){
-            $(".cno-mask").inputmask("99.999.999999/99");
-        });
     }else{
         alert("Uma opção precisa ser selecionada")
     }
-
-    $(document).ready(function(){
-        $(".cep-mask").inputmask("99999-999");
-    });
-    $(document).ready(function(){
-        $(".cnae-mask").inputmask("9999-9/99");
-    });
-    $(document).ready(function(){
-        $(".tell-mask").inputmask("(99) 9 9999-9999");
-    });
 });
 
 document.getElementById("cep-pesquisa").addEventListener('change'), function(){
     var cep = document.getElementById('cep-pesquisa').value.replace(/\D/g, '');
 
-    // var url = 
 }
-
 
 function cat_proximo1(){
     const campo3 = document.getElementById("campo3"); // Elemento que será exibido ou oculto
