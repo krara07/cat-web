@@ -163,7 +163,7 @@ document.getElementById("tipoCat").addEventListener('change', function(){
         $(".tell-mask").inputmask("(99) 9 9999-9999");
         $(".rg-mask").inputmask("99.999.999-9");
         $(document).ready(function(){
-            $(".remu-mask").inputmask({
+            $(".num-mask").inputmask({
                 alias: "currency",
                 prefix: "R$ ",
                 groupSeparator: ".",
