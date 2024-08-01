@@ -39,6 +39,10 @@ label{
 }
 
 /* RE-Class */
+.icon{
+    width: 10%;
+}
+
 .border-bottom{
     border-bottom-style: solid;
     border-bottom-color: var(--cores-es);
@@ -65,6 +69,13 @@ label{
     display: flex;
     justify-content: center;
     gap: 1vh;
+}
+
+.display-final-cat{
+    align-items: center;
+    display: flex;
+    margin-left: 3vh;
+    margin-block: 2vh;
 }
 
 .display-justify{
@@ -463,7 +474,6 @@ main.cat-inicio{ /* Geral 1*/
 main.cat-inicio section.titulo{ /* Geral 2 */
     margin-inline: 25vh;
     padding-top: 5px;
-    /* border: 1px solid var(--gris60); */
     position: relative;
     padding-bottom: 2vh;
     box-shadow: 0 0 0.5vh 1px var(--gris50);
@@ -551,3 +561,85 @@ main.cat-inicio section.titulo#campo4{
 }
 
 /* PÁGINA CAT 2*/
+
+/* PÁGINA CAT FINAL */
+main.cat-final{
+    align-items: center;
+    height: 100%;
+    section{
+        margin-inline: 5vh;
+        margin-block: 4vh;
+    }
+    h1, h2{
+        font-size: 20px;
+        margin-left: 15px;
+        padding-block: 1vh;
+    }
+    h1{
+        color: var(--gris5);
+    }
+
+    div{
+        align-items: center;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td, th{
+        border: 1px solid var(--gris60);
+        text-align: left;
+        padding-left: 20px;
+    }
+    td input, td select{
+        width: 98%;
+        background-color: transparent;
+        color: var(--gris10);
+        font-size: 17px;
+        border: none;
+        padding: 5px;
+    }
+    input, select{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: var(--gris10);
+    }
+    option{
+        background-color: var(--base-negro);
+    }
+    td input[type=text]:focus{
+        border: none;
+    }
+}
+
+main.cat-final section.inicio{
+    h1, h2{
+        font-size: 30px;
+    }
+    h2, input{
+        color: var(--gris30);
+    }
+    input{
+        font-size: 30px;
+    }
+}
+
+main.cat-final div.assinant{
+    margin-inline: 10vh;
+    gap: 30vh;
+    margin-inline: 5vh;
+    p{
+        padding: 1vh 15vh;
+        border-top: 1px solid var(--cores-es);
+        margin-top: 2vh;
+    }
+}
+
+main.cat-final{
+    .final-text{
+        margin-block: 20px;
+        margin-inline: 5vh;
+        line-height: 2vh;
+    }
+}

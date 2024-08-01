@@ -60,6 +60,35 @@ function modos_img(){
     });
 }
 
+// mascaras
+document.addEventListener('DOMContentLoaded', (event) => {
+    $(document).ready(function(){
+        $(".cpf-mask").inputmask("999.999.999-99");
+        $(".nit-mask").inputmask("999.99999.99-9");
+        $(".ctps-mask").inputmask("9999999/9999");
+        $(".cbo-mask").inputmask("9999-99");
+        $(".cep-mask").inputmask("99999-999");
+        $(".cnpj-mask").inputmask("99.999.999/9999-99");
+        $(".cei-mask").inputmask("99.999.99999/99");
+        $(".caepf-mask").inputmask("999.999.999/999-99");
+        $(".cno-mask").inputmask("99.999.999999/99");
+        $(".cnae-mask").inputmask("9999-9/99");
+        $(".rg-mask").inputmask("99.999.999-9");
+        $(".tell-mask").inputmask("(99) 9 9999-9999");
+        $(".regpoli-mask").inputmask("99999");
+        $(".crm-mask").inputmask("999999-9")
+        $(".num-mask").inputmask({
+            alias: "currency",
+            prefix: "R$ ",
+            groupSeparator: ".",
+            radixPoint: ",",
+            digits: 2,
+            autoGroup: true,
+            rightAlign: false   
+        });
+    });
+});
+
 // trocar imagens
 document.addEventListener('DOMContentLoaded', (event) => {
     const imagens = document.querySelectorAll('.img-logo'); // Seleciona todos os elementos com a classe 'img-logo'
@@ -112,6 +141,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             senha.type = 'password';
         }
     });
+    $(document).ready(function(){
+        $(".tell-mask").inputmask("(99) 9 9999-9999");
+        $(".num-mask").inputmask({
+            alias: "currency",
+            prefix: "R$ ",
+            groupSeparator: ".",
+            radixPoint: ",",
+            digits: 2,
+            autoGroup: true,
+            rightAlign: false
+        });
+    });
 });
 
 // cat-inicio
@@ -148,32 +189,6 @@ document.getElementById("tipoCat").addEventListener('change', function(){
         cat_part2.style.visibility = "hidden";
         alert("Uma opção precisa ser selecionada");
     }
-
-    $(document).ready(function(){
-        $(".cpf-mask").inputmask("999.999.999-99");
-        $(".nit-mask").inputmask("999.99999.99-9");
-        $(".ctps-mask").inputmask("9999999/9999");
-        $(".cbo-mask").inputmask("9999-99");
-        $(".cep-mask").inputmask("99999-999");
-        $(".cnpj-mask").inputmask("99.999.999/9999-99");
-        $(".cei-mask").inputmask("99.999.99999/99");
-        $(".caepf-mask").inputmask("999.999.999/999-99");
-        $(".cno-mask").inputmask("99.999.999999/99");
-        $(".cnae-mask").inputmask("9999-9/99");
-        $(".tell-mask").inputmask("(99) 9 9999-9999");
-        $(".rg-mask").inputmask("99.999.999-9");
-        $(document).ready(function(){
-            $(".num-mask").inputmask({
-                alias: "currency",
-                prefix: "R$ ",
-                groupSeparator: ".",
-                radixPoint: ",",
-                digits: 2,
-                autoGroup: true,
-                rightAlign: false
-            });
-        });
-    });
 });
 
 //cat inicio
@@ -229,7 +244,6 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
 
 document.getElementById("cep-pesquisa").addEventListener('change'), function(){
     var cep = document.getElementById('cep-pesquisa').value.replace(/\D/g, '');
-
 }
 
 function cat_proximo1(){

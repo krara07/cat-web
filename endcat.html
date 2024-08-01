@@ -16,15 +16,15 @@
         </head>
         <body>
             <main class="cat-final">
-                <section class="inicio border-bottom">
-                    <div class="display-center">
+                <section class="inicio">
+                    <div class="display-final-cat">
                         <div>
-                            <img class="icon" data-type="maleta" src="./assets/images/maleta-es.png" alt="Maleta" id="maleta">
+                            <img class="icon" data-type="maleta" src="./assets/images/logo-es.png" alt="Maleta" id="maleta">
                         </div>
                         <div>
                         <h1>CAT - Comunicação de Acidente de trabalho</h1>
                             <div class="display-center">
-                                <h2>Número da CAT:</h2>
+                                <h2 class="titulo-cat-final">Número da CAT:</h2>
                                 <input type="text" id="numero-cat" class="numero-cat">
                             </div>
                         </div>
@@ -33,21 +33,10 @@
                 <section>
 					<h2>Informações de Emitente</h2>
                     <table>
-                        <!--
-input{
-    width: 100%;
-    outline: none;
-    background-color: transparent;
-}
-                        
-input[type=text]:focus{
-	border: none;
-}
-                        -->
                         <tr> 
                             <td>Emitente</td>
                             <td><input type="text"></td>
-                            <td>Data Emissão</td>
+                            <td style="width: 15%;">Data Emissão</td>
                             <td><input type="date"></td>
                         </tr>
                         <tr>
@@ -60,7 +49,7 @@ input[type=text]:focus{
                             <td>Filiação</td>
                             <td><input type="text"></td>
                             <td>E-mail</td>
-                            <td><input type="date"></td>
+                            <td><input type="text"></td>
                         </tr>
                     </table>
                 </section>
@@ -106,7 +95,7 @@ input[type=text]:focus{
 							</tr>
 							<tr>
 								<td>NIT/PIS/PASEP</td>
-								<td><input type="text" class="nit-cat nit-mask" style="display: none;"></td>
+								<td><input type="text" class="nit-mask"></td>
 								<td>CEP</td>
 								<td><input class="cep-mask" type="text"></td>
 							</tr>
@@ -138,46 +127,260 @@ input[type=text]:focus{
 					</table>
 				</section>
 				<section>
+					<h2>Informações do Acidentado</h2>
+					<table>
+						<tr>
+							<td>Nome</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Nome da Mãe</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Data de Nascimento</td>
+							<td><input type="date"></td>
+							<td>Sexo Biológico</td>
+							<td><select>
+								<option value="0">Selecione uma opção</option>
+								<option value="1">Masculino</option>
+								<option value="2">Feminino</option>
+								<option value="3">Outro</option>
+								<option value="4">Não informado</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td>Grau de Instrução</td>
+							<td colspan="3"><select title="Grau de Instrução" name="" id="">
+                                <option value="0">Selecione uma Opção</option>
+                                <option value="1">Educação Infantil</option>
+                                <option value="2">Ensino Fundamental Incompleto</option>
+                                <option value="3">Ensino Fundamental Completo</option>
+                                <option value="4">Ensino Médio Incompleto</option>
+                                <option value="5">Ensino Médio Completo</option>
+                                <option value="6">Curso Técnico</option>
+                                <option value="7">Ensino Superior Incompleto</option>
+                                <option value="8">Ensino Superior Completo</option>
+                                <option value="9">Pós-graduação</option>
+                                <option value="10">Mestrado</option>
+                                <option value="11">Doutorado</option>
+                                <option value="12">EJA - Ensino Fundamental</option>
+                                <option value="13">EJA - Ensino Médio</option>                                
+                            </select></td>
+						</tr>
+						<tr>
+							<td>Estado Civil</td>
+							<td><select name="" id="">
+                                <option value="0">Selecione uma Opção</option>
+                                <option value="1">Solteiro(a)</option>
+                                <option value="2">Casado(a)</option>
+                                <option value="3">Divorciado(a)</option>
+                                <option value="4">Viúvo(a)</option>
+                                <option value="5">Separado(a)</option>
+                                <option value="6">União Estável</option>
+                                <option value="7">Outro</option>
+                            </select></td>
+							<td>Remuneração</td>
+							<td><input class="num-mask" type="text"></td>
+						</tr>
+						<tr>
+							<td>CTPS</td>
+							<td><input class="ctps-mask" type="text"></td>
+							<td>Identidade</td>
+							<td><input class="rg-mask" type="text"></td>
+						</tr>
+						<tr>
+							<td>NIS/PIS/PASEP</td>
+							<td><input class="nit-mask" type="text"></td>
+							<td>CEP</td>
+							<td><input class="cep-mask" type="text"></td>
+						</tr>
+						<tr>
+							<td>Endereço</td>
+							<td><input type="text"></td>
+							<td>Bairro</td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Estado</td>
+							<td><input type="text"></td>
+							<td>Município</td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Telefone</td>
+							<td><input class="tell-mask" type="text"></td>
+							<td>CBO</td>
+							<td><input class="cbo-mask" type="text"></td>
+						</tr>
+						<tr>
+							<td>Aposentadoria</td>
+							<td><input type="date"></td>
+							<td>Área</td>
+							<td><input type="text"></td>
+						</tr>
+					</table>
+				</section>
+				<section>
 					<h2>Informações do Acidente</h2>
 					<table>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
+						<tr>
+							<td>Data do Acidente</td>
+							<td><input class="date" type="text"></td>
+							<td>Hora do Acidente</td>
+							<td><input type="time"></td>
+						</tr>
+						<tr>
+							<td>Horas Trabalhadas</td>
+							<td><input type="number"></td>
+							<td>Tipo</td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Houve Afastamento?</td>
+							<td><select name="" id="">
+								<option value="0">Selecione Uma Opção</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select></td>
+							<td>Reg. Policial</td>
+							<td><input class="regpoli-mask" type="text"></td>
+						</tr>
+						<tr>
+							<td>Local do Acidente</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Esp. Local</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>CNPJ da Prestadora</td>
+							<td><input class="cnpj-mask" type="text"></td>
+							<td>UF do Acidente</td>
+							<td><select name="" id="">
+								<option value="1">AC</option>
+								<option value="2">AL</option>
+								<option value="3">AP</option>
+								<option value="4">AM</option>
+								<option value="5">BA</option>
+								<option value="6">CE</option>
+								<option value="7">DF</option>
+								<option value="8">ES</option>
+								<option value="9">GO</option>
+								<option value="10">MA</option>
+								<option value="11">MT</option>
+								<option value="12">MS</option>
+								<option value="13">MG</option>
+								<option value="14">PA</option>
+								<option value="15">PB</option>
+								<option value="16">PR</option>
+								<option value="17">PE</option>
+								<option value="18">PI</option>
+								<option value="19">RJ</option>
+								<option value="20">RN</option>
+								<option value="21">RS</option>
+								<option value="22">RO</option>
+								<option value="23">RR</option>
+								<option value="24">SC</option>
+								<option value="25">SP</option>
+								<option value="26">SE</option>
+								<option value="27">TO</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td>Município do Acidente</td>
+							<td><input type="text"></td>
+							<td>Último Dia de Trab. Dt Óbito</td>
+							<td><input type="date"></td>
+						</tr>
+						<tr>
+							<td>Parte do Corpo</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Agente Causador</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Sit. Geradora</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Morte</td>
+							<td><select name="" id="">
+								<option value="0">Selecione Uma Opção</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select></td>
+							<td>Data Óbito</td>
+							<td><input type="date"></td>
+						</tr>
 					</table>
-					<div class="display-center">
-						<p class="assinant">Local e Data</p>
-						<p class="assinant">Assinatura e Carimbo do Emitente</p>
-					</div>
 				</section>
+
+				<div class="display-center assinant">
+					<p>Local e Data</p>
+					<p>Assinatura e Carimbo do Emitente</p>
+				</div>
+
 				<section>
 					<h2>Informações do Atestado Médico</h2>
 					<table>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
-						<tr></tr>
+						<tr>
+							<td>Unidade</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Data Atendimento</td>
+							<td><input type="date"></td>
+							<td>Hora Atendimento</td>
+							<td><input type="time"></td>
+						<tr>
+							<td>Houve Internação</td>
+							<td><select name="" id="">
+								<option value="0">Selecione Uma Opção</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select></td>
+							<td>Será Afastado?</td>
+							<td><select name="" id="">
+								<option value="0">Selecione Uma Opção</option>
+								<option value="1">Sim</option>
+								<option value="2">Não</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td>Nat. Lesão</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>CID-10</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Observações</td>
+							<td colspan="3"><input type="text"></td>
+						</tr>
+						<tr>
+							<td>CRM</td>
+							<td colspan="3"><input class="crm-mask" type="text"></td>
+						</tr>
 					</table>
-					<div class="display-center">
-						<p class="assinant">Local e Data</p>
-						<p class="assinant">Assinatura (*) e Carimbo (legível) do Médico com CRM/UF</p>
-					</div>
 				</section>
-				<section>
-					<p>A apresentação do atestado médico original. com as informações de identificação do médico assistente, substitui o prenchimento deste campo.
-(9 impressão desta CAT deverá ser apresentada juntamente com o(s) documento(s) origina) referente so segurado. para requerer o beneficio
-Bcidentário junto à Agência da Previdência Social</p>
-				</section>
+
+				<div class="display-center assinant">
+					<p>Local e Data</p>
+					<p>Assinatura (*) e Carimbo (legível) do Médico com CRM/UF</p>
+				</div>
+
+				<p class="final-text">Cadastrada em: </p>
+				<p class="final-text">* A apresentação do atestado médico original, com as 
+					informações de identificação do médico assistente, substitui o 
+					preenchimento deste campo. A impressão desta CAT deverá ser apresentada 
+					juntamente com o(s) documento(s) original(is) referente(s) ao segurado, 
+					para requerer o benefício acidentário junto à Agência da Previdência Social.</p>
             </main>
+			<script src="./assets/js/script.js"></script>
         </body>
     </html>
