@@ -295,7 +295,7 @@ main.index section.iniciar{                /* SECTION.INICIAR */
                 margin-left: 10px;
             }
         }
-        a button{
+        button{
             font-size: 2vh;
             padding: 1vh 5vh;
         }
@@ -559,8 +559,6 @@ main.cat-inicio section.titulo#campo4{
         gap: 20vh;
     }
 }
-
-/* PÁGINA CAT 2*/
 
 /* PÁGINA CAT FINAL */
 main.cat-final{

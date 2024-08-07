@@ -22,7 +22,7 @@
         </header>
         
         <main class="login">    
-            <section class="login border-full">
+            <section class="login border-full" style="display: block;"> <!-- Display: none -->
                 <img class="icon" data-type="logo" src="./assets/images/logo-es.png" alt="Logo" class="logo" id="logo">
                 <form action="./login.html" class="form-login">
                     <div class="form">
@@ -39,10 +39,12 @@
                     <label for="">Ver Senha</label>
                 </form>
                 <div class="button-login">
-                    <button type="submit" class="button-click">Entrar</button>
+                    <button onclick="login()" class="button-click">Entrar</button>
                 </div>
             </section>
-            <section class="logado"></section>
+            <section class="logado" style="display: none;">
+                
+            </section>
         </main>
 
         <footer>
@@ -79,6 +81,7 @@
         </footer>
         <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
         <script src="./assets/js/script.js"></script> <!-- Caminho do script do site -->
+        <script src="./assets/js/mysql.js"></script> <!-- Script para conexão php -->
     </body>
 </html>
 
