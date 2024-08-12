@@ -2,10 +2,6 @@
 let ativar_modos = JSON.parse(localStorage.getItem("ativar_modos")) || false;
 let cor_logo = JSON.parse(localStorage.getItem("cor_logo")) || false;
 
-function login(){
-    
-}
-
 // Modo claro / escuro - cores
 function modos(){
     // Alterna o estado das variáveis
@@ -70,7 +66,6 @@ document.addEventListener("DOMContentLoaded",() => {
         document.documentElement.style.setProperty('--cores-es', '#ffa05c');
     }
 });
-
 
 // trocar imagens
 function modos_img(){
@@ -288,6 +283,48 @@ function cat_proximo1(){
         campo3.style.display = "flex";
     }
 }
+
+// página 2 login
+function login(){
+    const username = document.getElementById("username");
+    const password = document.getElementById("password"); // corrigir usando banco de dados
+    const section1 = document.getElementById("section_login1");
+    const section2 = document.getElementById("section_login2");
+    const h1 = document.getElementById("txt_name");
+
+    section1.style.display = "none";
+    section2.style.display = "block";
+
+    h1.innerText = "Bem vindo(a), "+ username.value;
+    /*
+    Se o login for de um usuário --> página CAT
+    se for adm --> Página Login 2
+    */
+}
+
+// pesquisa página login
+function btts_sections(button){
+    const bd_1 = document.getElementById("bd_1");
+    const bd_2 = document.getElementById("bd_2");
+    const bd_3 = document.getElementById("bd_3");
+    const bd_4 = document.getElementById("bd_4");
+
+    if(button == 1){
+        bd_1.style.display = "block";
+        bd_2.style.display = "none"; bd_3.style.display = "none"; bd_4.style.display = "none";
+    }else if(button == 2) {
+        bd_2.style.display = "block";
+        bd_1.style.display = "none"; bd_3.style.display = "none"; bd_4.style.display = "none";
+    }else if(button == 3) {
+        bd_3.style.display = "block";
+        bd_1.style.display = "none"; bd_2.style.display = "none"; bd_4.style.display = "none";
+    }else{
+        bd_4.style.display = "block";
+        bd_1.style.display = "none"; bd_2.style.display = "none"; bd_3.style.display = "none";
+    }
+}
+
+
 
 //print da tela do documento
 // window.print()

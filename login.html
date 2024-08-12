@@ -17,13 +17,13 @@
         <header id="header">
             <div class="left">
                 <img alt="Logo" src="./assets/images/logo-es.png" class="img-logo" onclick="modos()">
-                <a href="./main.html"><h1 class="h1">ProSafe - LOGIN</h1></a>
+                <a href="./main.html" style="display: flex; justify-content: center;"><h1 class="h1">ProSafe -</h1><h1 id="txt_name">- LOGIN</h1></a>
             </div>
         </header>
         
-        <main class="login">    
-            <section class="login border-full" style="display: block;"> <!-- Display: none -->
-                <img class="icon" data-type="logo" src="./assets/images/logo-es.png" alt="Logo" class="logo" id="logo">
+        <main class="login">
+            <section id="section_login1" class="login border-full" style="display: none;"> <!-- Display: none -->
+                <img class="icon" data-type="logo" src="./assets/images/logo-es.png" alt="Logo" id="logo">
                 <form action="./login.html" class="form-login">
                     <div class="form">
                         <label for="username">Usuário:</label>
@@ -42,15 +42,29 @@
                     <button onclick="login()" class="button-click">Entrar</button>
                 </div>
             </section>
-            <section class="logado" style="display: none;">
-                
+            <section id="section_login2" class="logado" style="display: block;">
+                <section class="conteiner">
+                    <div class="display-center">
+                        <button title="Empregador" class="button-click" onclick="btts_sections(1)">Empregador</button>
+                        <button title="Acidente" class="button-click" onclick="btts_sections(2)">Acidente</button>
+                        <img class="icon" data-type="logo" src="./assets/images/logo-es.png" alt="Logo" id="logo_bd">
+                        <button title="Acidentado" class="button-click" onclick="btts_sections(3)">Acidentado</button>
+                        <button title="Medico" class="button-click" onclick="btts_sections(4)">Médico</button>
+                    </div>
+                </section>
+                <section class="section_pesquisa border_full" id="bd_1" style="display: block;">
+                    
+                </section>
+                <section class="section_pesquisa" id="bd_2" style="display: none;"></section>
+                <section class="section_pesquisa" id="bd_3" style="display: none;"></section>
+                <section class="section_pesquisa" id="bd_4" style="display: block;"></section>
             </section>
         </main>
 
         <footer>
             <div class="div1">
                 <h2>Dev. Full-Stack</h2>
-                <li>Bianca Araujo Coelho <a href="https://github.com/BrytanniADJ">Github</a> <a href="">LinkedIn</a></li>
+                <li>Bianca Araujo Coelho <a href="https://github.com/BrytanniADJ">Github</a> <a href="https://linkedin.com/in/bianca-ara%C3%BAjo-b03b3b205">LinkedIn</a></li>
                 <li>Lucas Bernardo Ribeiro Siqueira <a href="https://github.com/RickSanchez1029">Github</a> <a href="https://linkedin.com/in/lucas-ribeiro-23a39a302">LinkedIn</a></li>
                 <li>Maria Eduarda Fernandes Costa</li>
             </div>
