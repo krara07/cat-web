@@ -80,7 +80,8 @@ label{
 
 .display-justify{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* justify-content: center; */
     div{
         margin: 0px 10vh;
     }
@@ -452,6 +453,7 @@ main.login section.logado{
     background-color: var(--gris90);
     border-radius: 5px;
     padding-block: 5px;
+    padding-inline: 40px;
     section.conteiner{
         width: 100%;    
         padding-block: 10px;
@@ -464,7 +466,7 @@ main.login section.logado{
     }
     button{
         padding-inline: 4%;
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
 }
 

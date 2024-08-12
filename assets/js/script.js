@@ -1,6 +1,13 @@
-// variáveis
+// escopo global
 let ativar_modos = JSON.parse(localStorage.getItem("ativar_modos")) || false;
 let cor_logo = JSON.parse(localStorage.getItem("cor_logo")) || false;
+
+const bd_1 = document.getElementById("bd_1");
+const bd_2 = document.getElementById("bd_2");
+const bd_3 = document.getElementById("bd_3");
+const bd_4 = document.getElementById("bd_4");
+const bd_5 = document.getElementById("bd_5");
+const bd_6 = document.getElementById("bd_6");
 
 // Modo claro / escuro - cores
 function modos(){
@@ -195,17 +202,11 @@ document.getElementById("tipoCat").addEventListener('change', function(){
     cat_part2.style.visibility = "visible";
     
     if(tipoCat == 1){
-        inicial.forEach(function(inicial){
-            inicial.style.display = "block";
-        });
+        inicial.forEach(function(inicial){inicial.style.display = "block";});
     }else if(tipoCat == 2){
-        reaber.forEach(function(reaber){
-            reaber.style.display = "block";
-        });
+        reaber.forEach(function(reaber){reaber.style.display = "block";});
     }else if(tipoCat == 3){
-        obito.forEach(function(obito){
-            obito.style.display = "block";
-        });
+        obito.forEach(function(obito){obito.style.display = "block";});
     }else{
         cat_part2.style.visibility = "hidden";
         alert("Uma opção precisa ser selecionada");
@@ -235,29 +236,17 @@ document.getElementById("tipo_empre-cat").addEventListener('change', function(){
     cno.forEach(function(cno){cno.style.display = "none";});
 
     if(tipo_empre == 1){
-        cnpj.forEach(function(cnpj){
-            cnpj.style.display = "block";
-        });
+        cnpj.forEach(function(cnpj){cnpj.style.display = "block";});
     }else if(tipo_empre == 2){
-        cei.forEach(function(cei){
-            cei.style.display = "block";
-        });
+        cei.forEach(function(cei){cei.style.display = "block";});
     }else if(tipo_empre == 3){
-        cpf.forEach(function(cpf){
-            cpf.style.display = "block";
-        });
+        cpf.forEach(function(cpf){cpf.style.display = "block";});
     }else if(tipo_empre == 4){
-        nit.forEach(function(nit){
-            nit.style.display = "block";
-        });
+        nit.forEach(function(nit){nit.style.display = "block";});
     }else if(tipo_empre == 5){
-        caepf.forEach(function(caepf){
-            caepf.style.display = "block";
-        });
+        caepf.forEach(function(caepf){caepf.style.display = "block";});
     }else if(tipo_empre == 6){
-        cno.forEach(function(cno){
-            cno.style.display = "block";
-        });
+        cno.forEach(function(cno){cno.style.display = "block";});
     }else{
         alert("Uma opção precisa ser selecionada")
     }
@@ -303,28 +292,52 @@ function login(){
 }
 
 // pesquisa página login
-function btts_sections(button){
-    const bd_1 = document.getElementById("bd_1");
-    const bd_2 = document.getElementById("bd_2");
-    const bd_3 = document.getElementById("bd_3");
-    const bd_4 = document.getElementById("bd_4");
+function telas_none(){
+    // esconde todas as telas
+    bd_1.style.display = "none";
+    bd_2.style.display = "none";
+    bd_3.style.display = "none";
+    bd_4.style.display = "none";
+    bd_5.style.display = "none";
+    bd_6.style.display = "none";
+}
 
-    if(button == 1){
+function btts_sections(number){
+    // chama a função para esconder todos os elementos
+    telas_none();
+
+    // exibe a tela de acordo com o botão
+    if(number == 1){
         bd_1.style.display = "block";
-        bd_2.style.display = "none"; bd_3.style.display = "none"; bd_4.style.display = "none";
-    }else if(button == 2) {
+    }else if(number == 2) {
         bd_2.style.display = "block";
-        bd_1.style.display = "none"; bd_3.style.display = "none"; bd_4.style.display = "none";
-    }else if(button == 3) {
+    }else if(number == 3) {
         bd_3.style.display = "block";
-        bd_1.style.display = "none"; bd_2.style.display = "none"; bd_4.style.display = "none";
-    }else{
+    }else if(number == 4){
         bd_4.style.display = "block";
-        bd_1.style.display = "none"; bd_2.style.display = "none"; bd_3.style.display = "none";
+    }else if(number == 5){
+        bd_5.style.display = "block";
+    }else{
+        bd_6.style.display = "block";
     }
 }
 
+function btts_edicao(number){ // terminar depois de inserir banco de dados
+    if(number == 1){
 
+    }else if(number == 2){
+
+    }else if(number == 3){
+
+    }else if(number == 4){
+
+    }else if(number == 5){
+
+    }else{
+
+    }
+
+}
 
 //print da tela do documento
 // window.print()
