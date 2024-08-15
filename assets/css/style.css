@@ -357,10 +357,11 @@ section.resumo{
     }
     h2{
         font-size: 3vh;
+        color: var(--gris10);
     }
     p, li{
         margin-top: 5px;
-        color: var(--gris10);
+        color: var(--gris20);
         margin-left: 40px;
         font-size: 20px;
         line-height: 3vh;
@@ -378,6 +379,15 @@ section.resumo{
     }
     a{
         color: var(--cores);
+    }
+    ul img{
+        margin-block: 0.5vh 2vh;
+        border-radius: 10px;
+        margin-left: 5vh;
+        padding: 1vh;
+        border: 1px solid var(--gris50);
+        width: 30%;
+        height: auto;
     }
 }
 
