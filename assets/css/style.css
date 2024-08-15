@@ -58,7 +58,7 @@ label{
     border-color: var(--gris60);
     background-color: var(--gris90);
     cursor: pointer;
-    color: var(--gris5);
+    color: var(--gris10);
 }
 
 .button-click:hover{
@@ -107,10 +107,16 @@ label{
     margin-inline: 10%;
 }
 
+.input{
+    background-color: transparent;
+    color: var(--gris10);
+    border: 1px solid var(--gris50);
+}
+
 /* BODY */
 body{
     background-color: var(--base-negro);
-    color: var(--gris5);
+    color: var(--gris10);
     font-family: "Raleway", sans-serif;
 }
 
@@ -310,7 +316,7 @@ main.index section.iniciar{                /* SECTION.INICIAR */
 main.index section.modify,
 section.resumo{
     margin: 1% 5%;
-    color: var(--gris5);
+    color: var(--gris10);
     display: flex;
     h2.data{
         margin-left: 10px;
@@ -421,7 +427,7 @@ main.login section.login{
                 border-color: var(--cores-es);
                 box-shadow: 0px 0px 10px var(--gris80) inset;
                 background-color: var(--gris100);
-                color: var(--gris5);
+                color: var(--gris10);
                 text-align: center;
                 font-size: 18px;
             }
@@ -451,22 +457,61 @@ main.login section.login{
 main.login section.logado{
     margin-inline: 1in;
     background-color: var(--gris90);
-    border-radius: 5px;
-    padding-block: 5px;
-    padding-inline: 40px;
+    border-radius: 10px;
     section.conteiner{
-        width: 100%;    
+        width: 100%;
         padding-block: 10px;
-        div{
-            gap: 5vh;
+        div.display-center{
+            gap: 7.2vh;
         }
+        div.botoes{
+            gap: 10vh;
+        }
+    }
+    section.head{
+        background-color: var(--gris60);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
     img#logo_bd{
         width: 2%;
     }
     button{
-        padding-inline: 4%;
+        padding-inline: 3%;
+        padding-block: 0.5%;
         font-size: 1.5vh;
+    }
+    button.tabelas{
+        cursor: pointer;
+        background-color: var(--gris60);
+        border: none;
+        color: var(--gris10);
+    }
+    button.tabelas:hover{
+        background-color: var(--gris90);
+    }
+    label{
+        margin-right: 10px;
+        line-height: 9.4vh;
+    }
+    input{
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+        padding-block: 3px;
+        padding-right: 10vh;
+    }
+    div.campos{
+        align-items: center;
+    }
+    div.txt-div1{
+        text-align: right;
+    }
+    div.separador{
+        gap: 20vh;
+    }
+    #bd_1, #bd_2, #bd_3,
+    #bd_4, #bd_5, #bd_6{
+        padding-bottom: 15px;
     }
 }
 
@@ -601,7 +646,7 @@ main.cat-final{
         padding-block: 1vh;
     }
     h1{
-        color: var(--gris5);
+        color: var(--gris10);
     }
 
     div{

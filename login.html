@@ -16,13 +16,12 @@
     <body class="login">
         <header id="header">
             <div class="left">
-                <img alt="Logo" src="./assets/images/logo-es.png" class="img-logo" onclick="modos()">
                 <a href="./main.html" style="display: flex; justify-content: center;"><h1 class="h1">ProSafe -</h1><h1 id="txt_name">- LOGIN</h1></a>
             </div>
         </header>
         
         <main class="login">
-            <section id="section_login1" class="login border-full" style="display: none;"> <!-- Display: none -->
+            <section id="section_login1" class="login border-full" style="display: block;"> <!-- Display: none -->
                 <img class="icon" data-type="logo" src="./assets/images/logo-es.png" alt="Logo" id="logo">
                 <form action="./login.html" class="form-login">
                     <div class="form">
@@ -42,29 +41,214 @@
                     <button onclick="login()" class="button-click">Entrar</button>
                 </div>
             </section>
-            <section id="section_login2" class="logado" style="display: block;">
-                <section class="conteiner">
+            <section id="section_login2" class="logado" style="display: none;">
+                <section class="head conteiner">
                     <div class="display-center">
-                        <button title="Empregador" class="button-click" onclick="btts_sections(1)">FUNCIONÁRIO</button>
-                        <button title="Acidente" class="button-click" onclick="btts_sections(2)">EMPRESA</button>
-                        <button title="Acidente" class="button-click" onclick="btts_sections(3)">MÉDICO</button>
-                        <img class="icon" data-type="logo" src="./assets/images/logo-es.png" alt="Logo" id="logo_bd">
-                        <button title="Acidentado" class="button-click" onclick="btts_sections(4)">CID</button>
-                        <button title="Medico" class="button-click" onclick="btts_sections(5)">TIPO DE LESÃO</button>
-                        <button title="Medico" class="button-click" onclick="btts_sections(6)">AGENTE CAUSADOR</button>
+                        <button title="Empregador" class="tabelas" onclick="btts_sections(1)">FUNCIONÁRIO</button>
+                        <button title="Acidente" class="tabelas" onclick="btts_sections(2)">EMPRESA</button>
+                        <button title="Acidente" class="tabelas" onclick="btts_sections(3)">MÉDICO</button>
+                        <img alt="Logo" src="./assets/images/logo-es.png" class="img-logo" onclick="modos()" id="logo_bd">
+                        <button title="Acidentado" class="tabelas" onclick="btts_sections(4)">CID</button>
+                        <button title="Medico" class="tabelas" onclick="btts_sections(5)">TIPO DE LESÃO</button>
+                        <button title="Medico" class="tabelas" onclick="btts_sections(6)">AGENTE CAUSADOR</button>
                     </div>
                 </section>
-                <section class="section_pesquisa" id="bd_1" style="display: block;"></section>
-                <section class="section_pesquisa" id="bd_2" style="display: none;"></section>
-                <section class="section_pesquisa" id="bd_3" style="display: none;"></section>
-                <section class="section_pesquisa" id="bd_4" style="display: none;"></section>
-                <section class="section_pesquisa" id="bd_5" style="display: none;"></section>
-                <section class="section_pesquisa" id="bd_6" style="display: none;"></section>
+                <section class="pesquisa" id="bd_1" style="display: block;">
+                    <div class="separador display-center">
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">COD:</label>
+                                <label for="cod">NOME:</label>
+                                <label for="cod">NOME DA MÃE:</label>
+                                <label for="cod">DATA NASC.:</label>
+                                <label for="cod">SEXO BIOLÓGICO:</label>
+                                <label for="cod">ESTADO CIVIL:</label>
+                                <label for="cod">CTPS:</label>
+                                <label for="cod">IDENTIDADE:</label>
+                                <label for="cod">CPF:</label>
+                                <label for="cod">NIT/PIS/PASEP:</label>
+                                <label for="cod">CEP:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                        <div class="campos campo2 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">ENDEREÇO:</label>
+                                <label for="cod">BAIRRO:</label>
+                                <label for="cod">ESTADO:</label>
+                                <label for="cod">MUNICÍPIO:</label>
+                                <label for="cod">TELEFONE:</label>
+                                <label for="cod">ÁREA:</label>
+                                <label for="cod">CBO:</label>
+                                <label for="cod">APOSENTADORIA:</label>
+                                <label for="cod">REMUNERAÇÃO:</label>
+                                <label for="cod">RA:</label>
+                                <label for="cod">GRAU INSTRUÇÃO:</label>
+                                <label for="cod">EMAIL:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pesquisa" id="bd_2" style="display: none;">
+                    <div class="separador display-center">
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">COD:</label>
+                                <label for="cod">NOME:</label>
+                                <label for="cod">TIPO NUM. DOC.:</label>
+                                <label for="cod">CNAE:</label>
+                                <label for="cod">CEP:</label>
+                                <label for="cod">BAIRRO:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                        <div class="campos campo2 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">ESTADO:</label>
+                                <label for="cod">MUNICÍPIO:</label>
+                                <label for="cod">ENDEREÇO:</label>
+                                <label for="cod">CNPJ:</label>
+                                <label for="cod">TELEFONE:</label>
+                                <label for="cod">EMAIL:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pesquisa" id="bd_3" style="display: none;">
+                    <div class="separador display-center">
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">COD MÉDICO:</label>
+                                <label for="cod">NOME:</label>
+                                <label for="cod">CPF:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                        <div class="campos campo2 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">EMAIL:</label>
+                                <label for="cod">ESPECIALIDADE:</label>
+                                <label for="cod">CRM:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pesquisa" id="bd_4" style="display: none;">
+                    <div class="separador display-center">
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">COD CID:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                        <div class="campos campo2 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">DESCRIÇÃO:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pesquisa" id="bd_5" style="display: none;">
+                    <div class="separador display-center">
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">COD:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">TIPO DE LESÃO:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pesquisa" id="bd_6" style="display: none;">
+                    <div class="separador display-center">
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">COD:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                        <div class="campos campo1 display-center">
+                            <div class="txt-column txt-div1">
+                                <label for="cod">AGENTE CAUSADOR:</label>
+                            </div>
+                            <div class="txt-column">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="conteiner">
-                    <div class="display-justify">
+                    <div class="botoes display-center">
                         <button class="button-click" onclick="btts_edicao(1)">CADASTRAR</button>
                         <button class="button-click" onclick="btts_edicao(2)">ATUALIZAR</button>
                         <button class="button-click" onclick="btts_edicao(3)">EXCLUIR</button>
+                        <img src="./assets/images/logo-es.png" style="display: none;">
                         <button class="button-click" onclick="btts_edicao(4)">CONSULTAR</button>
                         <button class="button-click" onclick="btts_edicao(5)">LIMPAR</button>
                         <button class="button-click" onclick="btts_edicao(6)">VOLTAR</button>
