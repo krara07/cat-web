@@ -1,6 +1,6 @@
 // escopo global
-let ativar_modos = JSON.parse(localStorage.getItem("ativar_modos")) || false;
-let cor_logo = JSON.parse(localStorage.getItem("cor_logo")) || false;
+let ativar_modos = false;
+let cor_logo = false;
 
 const bd_1 = document.getElementById("bd_1");
 const bd_2 = document.getElementById("bd_2");
@@ -14,10 +14,6 @@ function modos(){
     // Alterna o estado das variáveis
     ativar_modos = !ativar_modos;
     cor_logo = !cor_logo;
-
-    // Salva os novos valores no localStorage
-    localStorage.setItem("ativar_modos", JSON.stringify(ativar_modos));
-    localStorage.setItem("cor_logo", JSON.stringify(cor_logo));
 
     // Aplica o estilo com base no modo
     if(!ativar_modos){
@@ -48,39 +44,13 @@ function modos(){
     modos_img();
 }
 
-document.addEventListener("DOMContentLoaded",() => {
-    if(ativar_modos){
-        document.documentElement.style.setProperty('--base-negro', '#010409');
-        document.documentElement.style.setProperty('--gris100', '#0d0d0d');
-        document.documentElement.style.setProperty('--gris90', '#212121');
-        document.documentElement.style.setProperty('--gris80', '#242424');
-        document.documentElement.style.setProperty('--gris70', '#2b2b2b');
-        document.documentElement.style.setProperty('--gris60', '#383838');
-        document.documentElement.style.setProperty('--gris10', '#d4d4d4');
-        document.documentElement.style.setProperty('--gris5', '#ececea');
-        document.documentElement.style.setProperty('--cores', '#0094ff');
-        document.documentElement.style.setProperty('--cores-es', '#005694');
-    }else{
-        document.documentElement.style.setProperty('--base-negro', '#ffffff');
-        document.documentElement.style.setProperty('--gris100', '#f2f2f2');
-        document.documentElement.style.setProperty('--gris90', '#f8f8fa');
-        document.documentElement.style.setProperty('--gris80', '#f6f7f8');
-        document.documentElement.style.setProperty('--gris70', '#f1f3f1');
-        document.documentElement.style.setProperty('--gris60', '#eae7ea');
-        document.documentElement.style.setProperty('--gris10', '#616b77');
-        document.documentElement.style.setProperty('--gris5', '#1f2328');
-        document.documentElement.style.setProperty('--cores', '#ff6b00');
-        document.documentElement.style.setProperty('--cores-es', '#ffa05c');
-    }
-});
-
 // trocar imagens
 function modos_img(){
     const icons = document.querySelectorAll(".icon"); // seleciona todos os documentos com Class=".icon"
 
     icons.forEach((icon) => { // Transforma cada célula do vetor icons em uma variável icon
         const type = icon.getAttribute("data-type"); // pega o atributo que tem o data-type
-        if(ativar_modos === false){
+        if(cor_logo === false){
             icon.src = `assets/images/${type}-cl.png`;
         }else{
             icon.src = `assets/images/${type}-es.png`;
