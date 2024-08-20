@@ -10,7 +10,7 @@ O **Prosafe** é um projeto desenvolvido pelos alunos da turma 060 do curso Téc
 
 <p>
     <img src="./assets/images/senac_logo.png" align="left" width="11%.5" style="margin-right: 15px;">
-    **SENAC** (Serviço Nacional de Aprendizagem Comercial) é uma instituição renomada que oferece educação e treinamento de alta qualidade nas áreas de Comércio, Gestão, Tecnologia e Serviços. O curso Técnico em Tecnologia da Informação, da qual nossa turma faz parte, é ministrado no horário das 13:00 às 15:00.
+    <strong>SENAC</strong> (Serviço Nacional de Aprendizagem Comercial) é uma instituição renomada que oferece educação e treinamento de alta qualidade nas áreas de Comércio, Gestão, Tecnologia e Serviços. O curso Técnico em Tecnologia da Informação, da qual nossa turma faz parte, é ministrado no horário das 13:00 às 15:00.
 </p>
 
 ## Turma
