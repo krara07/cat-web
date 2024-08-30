@@ -409,7 +409,7 @@ main.login{
 }
 
 main.login section.login{
-    margin-inline: 7in;
+    margin-inline: 32%;
     height: 100%;
     align-items: center;
     text-align: center;
@@ -475,7 +475,7 @@ main.login section.logado{
             gap: 7.2vh;
         }
         div.botoes{
-            gap: 10vh;
+            gap: 5%;
         }
     }
     section.head{
