@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(238, 238, 238);
+}
+
+header {
+  background-color: rgb(107, 179, 255);
+  padding: 30px;
+  text-align: center;
+}
+
+.topo {
+  position: relative;
+}
+
+.titulo {
+  position: absolute;
+  top: -30px;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 10px;
+}
+#inicial select {
+  background-color: rgb(238, 238, 238);
+}
+.inp {
+  width: 25%;
+  top: 5px;
+  float: right;
+  flex-wrap: nowrap;
+  padding: 3px 0;
+  justify-content: left;
+}
+#inicial input {
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  width: 170px;
+  height: 17px;
+  margin: 6px 0;
+  border-width: 1px;
+  display: list-item;
+}
+.label {
+  flex-direction: column;
+  display: inline;
+  width: 25%;
+}
+.label p {
+  padding: 3px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#inicial {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 150px;
+}
+
+#inicial h2 {
+  padding-bottom: 20px;
+}
+#inicial h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#empregador {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#empregador h2 {
+  padding-bottom: 20px;
+}
+#empregador p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#empregador select {
+  width: 170px;
+  border-radius: 4px;
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
+  display: list-item;
+}
+#empregador input {
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  width: 170px;
+  height: 17px;
+  margin: 6px 0;
+  border-width: 1px;
+  display: list-item;
+}
+
+#acidentado {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#acidentado h2 {
+  padding-bottom: 20px;
+}
+#acidentado p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#acidentado select {
+  width: 170px;
+  border-radius: 4px;
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
+  display: list-item;
+}
+#acidentado input {
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  width: 170px;
+  height: 17px;
+  margin: 6px 0;
+  border-width: 1px;
+  display: list-item;
+}
+
+.div-flex {
+  display: flex;
+  width: 50%;
+  position: relative;
+}
+.div {
+  display: flex;
+  width: 50%;
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  
+}
+#acidente {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#acidente p {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+#acidente select {
+  width: 170px;
+  border-radius: 4px;
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
+  display: list-item;
+}
+#acidente input {
+  border-color: rgb(224, 224, 224);
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  width: 170px;
+  height: 17px;
+  margin: 0 0 5px 0;
+  border-width: 1px;
+  display: list-item;
+}
+.btn{
+  margin: 20px;
+  text-align: center;
+}
+.btn button{
+  background-color:rgb(107, 179, 255);
+  width: 75px;
+  border: none;
+  height: 25px;
+  font-weight: 800;
+  border-radius: 5px;
+}
+.btn button:hover{
+  background-color: rgb(3, 108, 219);
+  color: white;
+}
+footer{
+  background-color: rgb(107, 179, 255);
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer h4{
+  line-height: 20px;
+}
